@@ -1,4 +1,13 @@
-# Your [DocPad](http://docpad.org) Project
+# Poker
+
+A Simple poker game
+
+LocalStorage for the credits.
+
+WebApp Capable
 
 ## License
-Copyright &copy; 2013+ All rights reserved.
+
+&copy; 2013 Taylor Young
+
+MIT Licensed

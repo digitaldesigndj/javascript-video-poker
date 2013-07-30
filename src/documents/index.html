@@ -1,0 +1,77 @@
+---
+layout: 'default'
+title: 'Poker'
+css: 'poker.css'
+javascript: 'poker.js'
+---
+
+<div class="message" data-bind="text: credits_message"></div>
+
+<div class="message" data-bind="text: message"></div>
+
+<div class="cards">
+	<div class="card" data-bind="css: card1_class, event: { touchstart: card1_hold_toggle }, click: card1_hold_toggle"></div>
+	<div class="card" data-bind="css: card2_class, event: { touchstart: card2_hold_toggle }, click: card2_hold_toggle"></div>
+	<div class="card" data-bind="css: card3_class, event: { touchstart: card3_hold_toggle }, click: card3_hold_toggle"></div>
+	<div class="card" data-bind="css: card4_class, event: { touchstart: card4_hold_toggle }, click: card4_hold_toggle"></div>
+	<div class="card" data-bind="css: card5_class, event: { touchstart: card5_hold_toggle }, click: card5_hold_toggle"></div>
+</div>
+
+<div class="buttons">
+	<button class="first" data-bind="click: card1_hold_toggle, event: { touchstart: card1_hold_toggle }, visible: hold_visible">HOLD</button>
+	<button data-bind="click: card2_hold_toggle, event: { touchstart: card2_hold_toggle }, visible: hold_visible">HOLD</button>
+	<button data-bind="click: card3_hold_toggle, event: { touchstart: card3_hold_toggle }, visible: hold_visible">HOLD</button>
+	<button data-bind="click: card4_hold_toggle, event: { touchstart: card4_hold_toggle }, visible: hold_visible">HOLD</button>
+	<button data-bind="click: card5_hold_toggle, event: { touchstart: card5_hold_toggle }, visible: hold_visible">HOLD</button>
+	<button data-bind="click: deal, event: { touchend: deal }, visible: deal_visible">DEAL</button>
+	<button data-bind="click: newGame, event: { touchend: newGame }, visible: new_game_visible">NEW GAME</button>
+</div>
+
+<table>
+	<thead>
+		<tr>
+			<th colSpan="2">Pay Table</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Royal Flush</td>
+			<td>bet x 250</td>
+		</tr>
+		<tr>
+			<td>Straight Flush</td>
+			<td>bet x 50</td>
+		</tr>
+		<tr>
+			<td>Four of a Kind</td>
+			<td>bet x 25</td>
+		</tr>
+		<tr>
+			<td>Full House</td>
+			<td>bet x 9</td>
+		</tr>
+		<tr>
+			<td>Flush</td>
+			<td>bet x 6</td>
+		</tr>
+		<tr>
+			<td>Straight</td>
+			<td>bet x 4</td>
+		</tr>
+		<tr>
+			<td>Straight</td>
+			<td>bet x 4</td>
+		</tr>
+		<tr>
+			<td>Three of a Kind</td>
+			<td>bet x 3</td>
+		</tr>
+		<tr>
+			<td>Two Pairs</td>
+			<td>bet x 2</td>
+		</tr>
+		<tr>
+			<td>Jacks or Better</td>
+			<td>bet x 1</td>
+		</tr>
+	</tbody>
