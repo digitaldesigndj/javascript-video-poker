@@ -7,18 +7,6 @@ body
 	text-shadow: 2px 2px 0 black
 	font-size: 22px
 
-.cards, .buttons
-	clear:both;
-
-button
-	width: 140px
-	height: 50px
-	background: yellow
-	margin: 5px
-	border: none
-	border-radius: 10px
-	font-size: 22px
-
 table
 	width: 100%
 	background: navy
@@ -27,7 +15,7 @@ table
 	font-weight: bold
 td
 	border-left: 1px solid yellow
-	padding: 0 4px
+	padding: 1px 4px
 	text-align: right
 .label
 	text-align: left
@@ -41,21 +29,43 @@ tr:nth-child(odd)
 	font-size: 22px
 	padding: 2%
 	width: 45%
-	float: right
+	float: left
 .credits
-	background-color: red
+	float: right
 	text-align: right
 
+.cards, .buttons
+	clear: both
+	max-width: 800px
+	margin: 0 auto
+.card_unit
+	float: left
+	width: 152px
 .card
 	width: 140px
 	height: 195px
 	background-image: url(cards.png);
-	float: left
 	border: 5px solid white
 	border-radius: 5px
 	margin: 5px
 .card.hold
 	border: 5px solid red
+button
+	width: 140px
+	height: 50px
+	background: yellow
+	margin: 5px 8px
+	border: none
+	border-radius: 10px
+	font-size: 22px
+	font-weight: bold
+button:hover
+	background: darken( yellow, 3 )
+
+.buttons button
+	float: right
+	margin-top: 10px
+	width: 200px
 
 .clubs.ace
 	background-position: 0px 0

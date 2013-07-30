@@ -13,7 +13,7 @@ javascript: 'poker.js'
 			<td class="column2">500</td>
 			<td class="column3">750</td>
 			<td class="column4">1000</td>
-			<td class="column5">4000</td>
+			<td class="column5">1250</td>
 		</tr>
 		<tr>
 			<td class="label">Straight Flush</td>
@@ -85,21 +85,30 @@ javascript: 'poker.js'
 <div class="credits message" data-bind="text: credits_message"></div>
 
 <div class="message" data-bind="text: message"></div>
-
 <div class="cards">
-	<div class="card" data-bind="css: card1_class, event: { touchstart: card1_hold_toggle }, click: card1_hold_toggle"></div>
-	<div class="card" data-bind="css: card2_class, event: { touchstart: card2_hold_toggle }, click: card2_hold_toggle"></div>
-	<div class="card" data-bind="css: card3_class, event: { touchstart: card3_hold_toggle }, click: card3_hold_toggle"></div>
-	<div class="card" data-bind="css: card4_class, event: { touchstart: card4_hold_toggle }, click: card4_hold_toggle"></div>
-	<div class="card" data-bind="css: card5_class, event: { touchstart: card5_hold_toggle }, click: card5_hold_toggle"></div>
+	<div class="card_unit">
+		<div class="card" data-bind="css: card1_class, event: { touchstart: card1_hold_toggle }, click: card1_hold_toggle"></div>
+		<button data-bind="click: card1_hold_toggle, event: { touchstart: card1_hold_toggle }, visible: hold_visible">HOLD</button>
+	</div>
+	<div class="card_unit">
+		<div class="card" data-bind="css: card2_class, event: { touchstart: card2_hold_toggle }, click: card2_hold_toggle"></div>
+		<button data-bind="click: card2_hold_toggle, event: { touchstart: card2_hold_toggle }, visible: hold_visible">HOLD</button>
+	</div>
+	<div class="card_unit">
+		<div class="card" data-bind="css: card3_class, event: { touchstart: card3_hold_toggle }, click: card3_hold_toggle"></div>
+		<button data-bind="click: card3_hold_toggle, event: { touchstart: card3_hold_toggle }, visible: hold_visible">HOLD</button>
+	</div>
+	<div class="card_unit">
+		<div class="card" data-bind="css: card4_class, event: { touchstart: card4_hold_toggle }, click: card4_hold_toggle"></div>
+		<button data-bind="click: card4_hold_toggle, event: { touchstart: card4_hold_toggle }, visible: hold_visible">HOLD</button>
+	</div>
+	<div class="card_unit">
+		<div class="card" data-bind="css: card5_class, event: { touchstart: card5_hold_toggle }, click: card5_hold_toggle"></div>
+		<button data-bind="click: card5_hold_toggle, event: { touchstart: card5_hold_toggle }, visible: hold_visible">HOLD</button>
+	</div>
 </div>
 
 <div class="buttons">
-	<button class="first" data-bind="click: card1_hold_toggle, event: { touchstart: card1_hold_toggle }, visible: hold_visible">HOLD</button>
-	<button data-bind="click: card2_hold_toggle, event: { touchstart: card2_hold_toggle }, visible: hold_visible">HOLD</button>
-	<button data-bind="click: card3_hold_toggle, event: { touchstart: card3_hold_toggle }, visible: hold_visible">HOLD</button>
-	<button data-bind="click: card4_hold_toggle, event: { touchstart: card4_hold_toggle }, visible: hold_visible">HOLD</button>
-	<button data-bind="click: card5_hold_toggle, event: { touchstart: card5_hold_toggle }, visible: hold_visible">HOLD</button>
 	<button data-bind="click: deal, event: { touchend: deal }, visible: deal_visible">DEAL</button>
 	<button data-bind="click: newGame, event: { touchend: newGame }, visible: new_game_visible">NEW GAME</button>
 </div>
