@@ -5,7 +5,84 @@ css: 'poker.css'
 javascript: 'poker.js'
 ---
 
-<div class="message" data-bind="text: credits_message"></div>
+<table>
+	<tbody>
+		<tr>
+			<td class="label">Royal Flush</td>
+			<td class="column1">250</td>
+			<td class="column2">500</td>
+			<td class="column3">750</td>
+			<td class="column4">1000</td>
+			<td class="column5">4000</td>
+		</tr>
+		<tr>
+			<td class="label">Straight Flush</td>
+			<td class="column1">50</td>
+			<td class="column2">100</td>
+			<td class="column3">150</td>
+			<td class="column4">200</td>
+			<td class="column5">250</td>
+		</tr>
+		<tr>
+			<td class="label">Four of a Kind</td>
+			<td class="column1">25</td>
+			<td class="column2">50</td>
+			<td class="column3">75</td>
+			<td class="column4">100</td>
+			<td class="column5">125</td>
+		</tr>
+		<tr>
+			<td class="label">Full House</td>
+			<td class="column1">9</td>
+			<td class="column2">18</td>
+			<td class="column3">27</td>
+			<td class="column4">36</td>
+			<td class="column5">45</td>
+		</tr>
+		<tr>
+			<td class="label">Flush</td>
+			<td class="column1">6</td>
+			<td class="column2">12</td>
+			<td class="column3">18</td>
+			<td class="column4">24</td>
+			<td class="column5">30</td>
+		</tr>
+		<tr>
+			<td class="label">Straight</td>
+			<td class="column1">4</td>
+			<td class="column2">8</td>
+			<td class="column3">12</td>
+			<td class="column4">16</td>
+			<td class="column5">20</td>
+		</tr>
+		<tr>
+			<td class="label">Three of a Kind</td>
+			<td class="column1">3</td>
+			<td class="column2">6</td>
+			<td class="column3">9</td>
+			<td class="column4">12</td>
+			<td class="column5">15</td>
+		</tr>
+		<tr>
+			<td class="label">Two Pairs</td>
+			<td class="column1">2</td>
+			<td class="column2">4</td>
+			<td class="column3">6</td>
+			<td class="column4">8</td>
+			<td class="column5">10</td>
+		</tr>
+		<tr>
+			<td class="label">Jacks or Better</td>
+			<td class="column1">1</td>
+			<td class="column2">2</td>
+			<td class="column3">3</td>
+			<td class="column4">4</td>
+			<td class="column5">5</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="credits message" data-bind="text: credits_message"></div>
 
 <div class="message" data-bind="text: message"></div>
 
@@ -26,52 +103,3 @@ javascript: 'poker.js'
 	<button data-bind="click: deal, event: { touchend: deal }, visible: deal_visible">DEAL</button>
 	<button data-bind="click: newGame, event: { touchend: newGame }, visible: new_game_visible">NEW GAME</button>
 </div>
-
-<table>
-	<thead>
-		<tr>
-			<th colSpan="2">Pay Table</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Royal Flush</td>
-			<td>bet x 250</td>
-		</tr>
-		<tr>
-			<td>Straight Flush</td>
-			<td>bet x 50</td>
-		</tr>
-		<tr>
-			<td>Four of a Kind</td>
-			<td>bet x 25</td>
-		</tr>
-		<tr>
-			<td>Full House</td>
-			<td>bet x 9</td>
-		</tr>
-		<tr>
-			<td>Flush</td>
-			<td>bet x 6</td>
-		</tr>
-		<tr>
-			<td>Straight</td>
-			<td>bet x 4</td>
-		</tr>
-		<tr>
-			<td>Straight</td>
-			<td>bet x 4</td>
-		</tr>
-		<tr>
-			<td>Three of a Kind</td>
-			<td>bet x 3</td>
-		</tr>
-		<tr>
-			<td>Two Pairs</td>
-			<td>bet x 2</td>
-		</tr>
-		<tr>
-			<td>Jacks or Better</td>
-			<td>bet x 1</td>
-		</tr>
-	</tbody>
