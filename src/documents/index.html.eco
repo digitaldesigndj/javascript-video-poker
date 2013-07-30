@@ -103,6 +103,6 @@ javascript: 'poker.js'
 </div>
 
 <div class="buttons">
-	<button data-bind="click: deal, event: { touchend: deal }, visible: deal_visible">DEAL</button>
+	<button data-bind="click: deal, event: { touchend: deal }, visible: deal_visible">DRAW</button>
 	<button data-bind="click: newGame, event: { touchend: newGame }, visible: new_game_visible">NEW GAME</button>
 </div>

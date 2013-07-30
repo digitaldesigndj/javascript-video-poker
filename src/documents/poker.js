@@ -18,43 +18,43 @@ if(key && localStorage.hasOwnProperty(key)){
 // The credits amout is saveed in `localStorage-bindings.js`
 
 module.exports = {
-	hold_visible: ko.observable( true ),
-	deal_visible: ko.observable( true ),
-	new_game_visible: ko.observable( false ),
+	hold_visible: ko.observable( false ),
+	deal_visible: ko.observable( false ),
+	new_game_visible: ko.observable( true ),
 	message: ko.observable( 'Welcome' ),
 	credits: ko.observable( saved_credits ),
 	bet: ko.observable(5),
 
-	card1_suit:  ko.observable( five_cards[0].suit ),
-	card1_value: ko.observable( five_cards[0].value ),
+	card1_suit:  ko.observable(),
+	card1_value: ko.observable(),
 	card1_hold:  ko.observable( false ),
 	card1_hold_toggle: function(){
 		this.card1_hold( !this.card1_hold() );
 	},
 
-	card2_suit:  ko.observable( five_cards[1].suit ),
-	card2_value: ko.observable( five_cards[1].value ),
+	card2_suit:  ko.observable(),
+	card2_value: ko.observable(),
 	card2_hold:  ko.observable( false ),
 	card2_hold_toggle: function(){
 		this.card2_hold( !this.card2_hold() );
 	},
 
-	card3_suit:  ko.observable( five_cards[2].suit ),
-	card3_value: ko.observable( five_cards[2].value ),
+	card3_suit:  ko.observable(),
+	card3_value: ko.observable(),
 	card3_hold:  ko.observable( false ),
 	card3_hold_toggle: function(){
 		this.card3_hold( !this.card3_hold() );
 	},
 
-	card4_suit:  ko.observable( five_cards[3].suit ),
-	card4_value: ko.observable( five_cards[3].value ),
+	card4_suit:  ko.observable(),
+	card4_value: ko.observable(),
 	card4_hold:  ko.observable( false ),
 	card4_hold_toggle: function(){
 		this.card4_hold( !this.card4_hold() );
 	},
 
-	card5_suit:  ko.observable( five_cards[4].suit ),
-	card5_value: ko.observable( five_cards[4].value ),
+	card5_suit:  ko.observable(),
+	card5_value: ko.observable(),
 	card5_hold:  ko.observable( false ),
 	card5_hold_toggle: function(){
 		this.card5_hold( !this.card5_hold() );
