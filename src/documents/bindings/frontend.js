@@ -50,3 +50,71 @@ poker.card5_class = ko.dependentObservable( function(){
 	}
 	return cardClass;
 }, poker );
+
+poker.card1_value_symbol = ko.dependentObservable( function(){
+	return get_symbol( this.card1_value() );
+}, poker );
+
+poker.card2_value_symbol = ko.dependentObservable( function(){
+	return get_symbol( this.card2_value() );
+}, poker );
+
+poker.card3_value_symbol = ko.dependentObservable( function(){
+	return get_symbol( this.card3_value() );
+}, poker );
+
+poker.card4_value_symbol = ko.dependentObservable( function(){
+	return get_symbol( this.card4_value() );
+}, poker );
+
+poker.card5_value_symbol = ko.dependentObservable( function(){
+	return get_symbol( this.card5_value() );
+}, poker );
+
+function get_symbol( value ){
+	var symbol = 'T';
+	switch ( value ){
+		case 'two':
+			symbol = '2'
+			break;
+		case 'three':
+			symbol = '3'
+			break;
+		case 'four':
+			symbol = '4'
+			break;
+		case 'five':
+			symbol = '5'
+			break;
+		case 'six':
+			symbol = '6'
+			break;
+		case 'seven':
+			symbol = '7'
+			break;
+		case 'eight':
+			symbol = '8'
+			break;
+		case 'nine':
+			symbol = '9'
+			break;
+		case 'ten':
+			symbol = '10'
+			break;
+		case 'jack':
+			symbol = 'j'
+			break;
+		case 'queen':
+			symbol = 'q'
+			break;
+		case 'king':
+			symbol = 'k'
+			break;
+		case 'ace':
+			symbol = 'a'
+			break;
+		default:
+			symbol = '0'
+	}
+	return symbol;
+}
