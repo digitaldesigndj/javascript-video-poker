@@ -86,26 +86,20 @@ javascript: 'poker.js'
 
 <div class="message" data-bind="text: message"></div>
 <div class="cards">
-	<div class="card_unit">
-		<div class="card" data-bind="css: card1_class, event: { touchstart: card1_hold_toggle }, click: card1_hold_toggle"></div>
-		<button data-bind="click: card1_hold_toggle, event: { touchstart: card1_hold_toggle }, visible: hold_visible">HOLD</button>
-	</div>
-	<div class="card_unit">
-		<div class="card" data-bind="css: card2_class, event: { touchstart: card2_hold_toggle }, click: card2_hold_toggle"></div>
-		<button data-bind="click: card2_hold_toggle, event: { touchstart: card2_hold_toggle }, visible: hold_visible">HOLD</button>
-	</div>
-	<div class="card_unit">
-		<div class="card" data-bind="css: card3_class, event: { touchstart: card3_hold_toggle }, click: card3_hold_toggle"></div>
-		<button data-bind="click: card3_hold_toggle, event: { touchstart: card3_hold_toggle }, visible: hold_visible">HOLD</button>
-	</div>
-	<div class="card_unit">
-		<div class="card" data-bind="css: card4_class, event: { touchstart: card4_hold_toggle }, click: card4_hold_toggle"></div>
-		<button data-bind="click: card4_hold_toggle, event: { touchstart: card4_hold_toggle }, visible: hold_visible">HOLD</button>
-	</div>
-	<div class="card_unit">
-		<div class="card" data-bind="css: card5_class, event: { touchstart: card5_hold_toggle }, click: card5_hold_toggle"></div>
-		<button data-bind="click: card5_hold_toggle, event: { touchstart: card5_hold_toggle }, visible: hold_visible">HOLD</button>
-	</div>
+	<% for i in [1,2,3,4,5]: %>
+		<div class="card_unit">
+			<div class="card" data-bind="
+				css: card<%=i%>_class,
+				event: { touchstart: card<%=i%>_hold_toggle },
+				click: card<%=i%>_hold_toggle
+			"></div>
+			<button data-bind="
+				click: card<%=i%>_hold_toggle,
+				event: { touchstart: card<%=i%>_hold_toggle },
+				visible: hold_visible
+			">HOLD</button>
+		</div>
+	<% end %>
 </div>
 
 <div class="buttons">
