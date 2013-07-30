@@ -11,13 +11,13 @@
     "docpad-plugin-eco": "~2.x",
     "docpad-plugin-stylus": "~2.x",
     "docpad-plugin-partials": "~2.x",
-    "docpad-plugin-browserify": "~2.x",
     "jquery-browserify": "~1.x",
     "plugin": "~0.3.x",
     "knockout": "~2.x",
-    "browserify": "~2.x"
+    "browserify": "~2.x",
+    "bal-util": "~2.0.x"
   },
-  "dev-dependencies": {
+  "devDependencies": {
     "docpad-plugin-livereload": "~2.x"
   },
   "main": "node_modules/docpad/bin/docpad-server",
