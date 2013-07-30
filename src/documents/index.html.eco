@@ -93,8 +93,8 @@ javascript: 'poker.js'
 				event: { touchstart: card<%=i%>_hold_toggle },
 				click: card<%=i%>_hold_toggle
 			">
-				<div class="value" data-bind="text: card<%=i%>_value_symbol"></div>
-				<div class="suit"></div>
+				<div class="value" data-bind="text: card<%=i%>_value_symbol, visible: card_front_visible"></div>
+				<div class="suit" data-bind="visible: card_front_visible"></div>
 			</div>
 			<button data-bind="
 				click: card<%=i%>_hold_toggle,

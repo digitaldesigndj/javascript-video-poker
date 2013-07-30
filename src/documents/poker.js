@@ -21,6 +21,7 @@ module.exports = {
 	hold_visible: ko.observable( false ),
 	deal_visible: ko.observable( false ),
 	new_game_visible: ko.observable( true ),
+	card_front_visible: ko.observable( false ),
 	message: ko.observable( 'Welcome' ),
 	credits: ko.observable( saved_credits ),
 	bet: ko.observable(5),
@@ -133,6 +134,7 @@ module.exports = {
 			self.deal_visible( true );
 			self.new_game_visible( false );
 			self.hold_visible( true );
+			self.card_front_visible( true );
 			self.message( 'Good Luck' );
 		}
 	},
