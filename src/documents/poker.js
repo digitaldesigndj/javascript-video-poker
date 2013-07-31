@@ -19,7 +19,7 @@ if(key && localStorage.hasOwnProperty(key)){
 
 module.exports = {
 	hold_visible: ko.observable( false ),
-	deal_visible: ko.observable( false ),
+	draw_visible: ko.observable( false ),
 	new_game_visible: ko.observable( true ),
 	card_front_visible: ko.observable( false ),
 	message: ko.observable( 'Welcome' ),
@@ -60,9 +60,9 @@ module.exports = {
 	card5_hold_toggle: function(){
 		this.card5_hold( !this.card5_hold() );
 	},
-	deal: function(){
+	draw: function(){
 		self = this;
-		if( !self.deal_visible() ){
+		if( !self.draw_visible() ){
 			return;
 		}
 		if( !self.card1_hold() ){
@@ -90,7 +90,7 @@ module.exports = {
 			self.card5_suit( card[0].suit );
 			self.card5_value( card[0].value );
 		}
-		self.deal_visible( false );
+		self.draw_visible( false );
 		self.new_game_visible( true );
 
 		self.card1_hold( false );
@@ -131,7 +131,7 @@ module.exports = {
 			self.card5_suit( five_new_cards[4].suit );
 			self.card5_value( five_new_cards[4].value );
 
-			self.deal_visible( true );
+			self.draw_visible( true );
 			self.new_game_visible( false );
 			// self.hold_visible( true );
 			self.card_front_visible( true );
