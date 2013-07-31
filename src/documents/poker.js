@@ -133,7 +133,7 @@ module.exports = {
 
 			self.deal_visible( true );
 			self.new_game_visible( false );
-			self.hold_visible( true );
+			// self.hold_visible( true );
 			self.card_front_visible( true );
 			self.message( 'Good Luck' );
 		}
