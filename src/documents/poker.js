@@ -211,8 +211,12 @@ module.exports = {
 		if( self.countInArray( self.suits(), self.card1_suit() ) === 5 ){
 			if( straight ){
 				if( JSON.stringify( self.numerical_values() ) === JSON.stringify( royal_straight ) ){
-					self.message( 'ROYAL FLUSH!!!, You win: ' + self.bet() * 250 );
-					self.credits( self.credits() + ( self.bet() * 250 ) );
+					var win_amount = 250;
+					if( self.bet() === 5 ){
+						win_amount = 800;
+					}
+					self.message( 'ROYAL FLUSH!!!, You win: ' + self.bet() * win_amount );
+					self.credits( self.credits() + ( self.bet() * win_amount ) );
 				}else{
 					self.message( 'Straight Flush, You win: ' + self.bet() * 50 );
 					self.credits( self.credits() + ( self.bet() * 50 ) );
