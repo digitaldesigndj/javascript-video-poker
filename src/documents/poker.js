@@ -101,6 +101,13 @@ module.exports = {
 
 		self.scoring();
 	},
+	incrementBet: function(){
+		self = this;
+		if( self.bet() === 5 ){
+			self.bet(0);
+		}
+		self.bet( self.bet() + 1 );
+	},
 	newGame: function(){
 		var self = this,
 			five_new_cards = [];

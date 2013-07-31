@@ -108,4 +108,5 @@ javascript: 'poker.js'
 <div class="buttons">
 	<button data-bind="click: draw, event: { touchend: draw }, visible: draw_visible">DRAW</button>
 	<button data-bind="click: newGame, event: { touchend: newGame }, visible: new_game_visible">DEAL</button>
+	<button data-bind="click: incrementBet">Bet <span data-bind="text: bet">1</span></button>
 </div>
