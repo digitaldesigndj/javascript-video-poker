@@ -13,7 +13,7 @@ if(key && localStorage.hasOwnProperty(key)){
 		saved_credits = JSON.parse(localStorage.getItem(key))
 	}catch(e){};
 }else{
-	saved_credits = 990;
+	saved_credits = 100;
 }
 // The credits amout is saveed in `localStorage-bindings.js`
 
@@ -143,6 +143,9 @@ module.exports = {
 			// self.hold_visible( true );
 			self.card_front_visible( true );
 			self.message( 'Good Luck' );
+		}else{
+			alert( 'You went broke! But this is no casino, have a 100 credits on the house' );
+			self.credits( 100 );
 		}
 	},
 	// The following are functions only... not to be used in a KO binding
