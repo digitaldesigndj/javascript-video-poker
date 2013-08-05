@@ -2,6 +2,11 @@
 
 A Simple poker game
 
+@todo, 
+
+Key Bindings
+Enter to deal, 1-5 + sdfjk to hold - Configurable?
+
 ## Get Started
 
 ```bash
