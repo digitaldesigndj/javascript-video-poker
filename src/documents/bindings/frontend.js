@@ -71,6 +71,7 @@ poker.card5_value_symbol = ko.dependentObservable( function(){
 	return get_symbol( this.card5_value() );
 }, poker );
 
+// The values in the cards module are strings so they can be used as css classes
 function get_symbol( value ){
 	var symbol = 'T';
 	switch ( value ){
