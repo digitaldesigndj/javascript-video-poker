@@ -30,35 +30,45 @@ module.exports = {
 	card1_value: ko.observable(),
 	card1_hold:  ko.observable( false ),
 	card1_hold_toggle: function(){
-		this.card1_hold( !this.card1_hold() );
+		if( this.hold_visible() ){
+			this.card1_hold( !this.card1_hold() );
+		}
 	},
 
 	card2_suit:  ko.observable(),
 	card2_value: ko.observable(),
 	card2_hold:  ko.observable( false ),
 	card2_hold_toggle: function(){
-		this.card2_hold( !this.card2_hold() );
+		if( this.hold_visible() ){
+			this.card2_hold( !this.card2_hold() );
+		}
 	},
 
 	card3_suit:  ko.observable(),
 	card3_value: ko.observable(),
 	card3_hold:  ko.observable( false ),
 	card3_hold_toggle: function(){
-		this.card3_hold( !this.card3_hold() );
+		if( this.hold_visible() ){
+			this.card3_hold( !this.card3_hold() );
+		}
 	},
 
 	card4_suit:  ko.observable(),
 	card4_value: ko.observable(),
 	card4_hold:  ko.observable( false ),
 	card4_hold_toggle: function(){
-		this.card4_hold( !this.card4_hold() );
+		if( this.hold_visible() ){
+			this.card4_hold( !this.card4_hold() );
+		}
 	},
 
 	card5_suit:  ko.observable(),
 	card5_value: ko.observable(),
 	card5_hold:  ko.observable( false ),
 	card5_hold_toggle: function(){
-		this.card5_hold( !this.card5_hold() );
+		if( this.hold_visible() ){
+			this.card5_hold( !this.card5_hold() );
+		}
 	},
 	draw: function(){
 		self = this;
@@ -140,7 +150,7 @@ module.exports = {
 
 			self.draw_visible( true );
 			self.new_game_visible( false );
-			// self.hold_visible( true );
+			self.hold_visible( true );
 			self.card_front_visible( true );
 			self.message( 'Good Luck' );
 		}else{
