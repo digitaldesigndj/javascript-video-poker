@@ -13,7 +13,7 @@
 	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<!-- Site Properities -->
-	<title>JavaScript Video Poker</title>
+	<title>Video Poker</title>
 	<meta name="description" content="Open source video poker in JavaScript" />
 	<meta name="keywords" content="video poker, online, open source" />
 
@@ -23,13 +23,20 @@
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="/ico/favicon.png" />
 	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-	<link rel="apple-touch-icon-precomposed" href="ico/poker57.png" />
+	<link rel="apple-touch-icon-precomposed" href="/ico/poker57.png" />
 	<!-- For first- and second-generation iPad: -->
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/poker72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/poker72.png" />
 	<!-- For iPhone with high-resolution Retina display: -->
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/poker114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/poker114.png" />
 	<!-- For third-generation iPad with high-resolution Retina display: -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/poker144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/poker144.png" />
+
+	<!-- Startup Screens -->
+	<!-- iPad Landscape -->
+	<link href="/ico/ipad-horizontal.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image" />
+	<!-- iPad Landscape (Retina) -->
+	<link href="/ico/ipad-retina-horizontal.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
 </head>
 <body>
 	<!--[if lt IE 7]>
