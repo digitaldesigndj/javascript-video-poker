@@ -185,7 +185,6 @@ module.exports = {
 		$.each( [2,3,4,5,6,7,8,9,10,11,12,13,14], function( i, v ){
 			var matches = self.countInArray( self.numerical_values(), v );
 			if( matches === 2 ){
-				console.log('a pair');
 				pair_count++;
 				if( v >= 11 ){
 					self.message('Jacks or Better, You win: ' + self.bet() );

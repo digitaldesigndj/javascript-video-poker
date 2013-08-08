@@ -4,5 +4,6 @@ var ko    = require('knockout'),
 require('./bindings/scoring.js');
 require('./bindings/frontend.js');
 require('./bindings/localStorage.js');
+require('./bindings/keybindings.js');
 
 ko.applyBindings( poker );
