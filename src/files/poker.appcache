@@ -4,19 +4,21 @@ CACHE MANIFEST
 index.html
 
 # styles
-styles/style.css
 poker.css
 
 # javascript
-poker.js
+bundle.js
 
 # images
-cards.png
+suits_sprite.png
 
 # icons
-ico/apple-touch-icon-57x57-precomposed.png
-ico/apple-touch-icon-72x72-precomposed.png
-ico/apple-touch-icon-114x114-precomposed.png
-ico/apple-touch-icon-144x144-precomposed.png
+ico/favicon.png
+ico/poker57.png
+ico/poker72.png
+ico/poker114.png
+ico/poker144.png
+ico/ipad-horizontal.png
+ico/ipad-retina-horizontal.png
 
 NETWORK:\n*\n
