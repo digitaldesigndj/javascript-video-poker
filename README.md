@@ -2,11 +2,6 @@
 
 A Simple poker game
 
-@todo, 
-
-Key Bindings
-Enter to deal, 1-5 + sdfjk to hold - Configurable?
-
 ## Get Started
 
 ```bash
@@ -16,7 +11,11 @@ npm install
 docpad run
 ```
 
-Then visit [http://localhost:9214](http://localhost:9214)
+Then visit [http://localhost:9779](http://localhost:9779)
+
+## Keyboard Controls
+
+Enter to deal/start game, 1-5 to hold.
 
 ## License
 
