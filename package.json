@@ -14,7 +14,7 @@
     "jquery-browserify": "~1.x",
     "plugin": "~0.3.x",
     "knockout": "~2.x",
-    "browserify": "~2.x",
+    "browserify": "~2.26.0",
     "bal-util": "~2.0.x"
   },
   "devDependencies": {
