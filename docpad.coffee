@@ -4,7 +4,7 @@ balUtil = require "bal-util"
 
 # Define the DocPad Configuration
 docpadConfig = {
-	port: 80
+	port: process.env.PORT || 9887
 	templateData:
 		scripts: ['bundle.js']
 	events:
