@@ -4,6 +4,10 @@ var $     = require( 'jquery-browserify' ),
 
 // Frontend display bindings
 
+$('.label').on('click', function(){
+	$('table').css({'display':'block'}).slideUp(1000);
+});
+
 // This formats the credits message
 poker.credits_message = ko.dependentObservable( function(){
 	return "Credits: " + this.credits();
