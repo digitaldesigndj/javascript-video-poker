@@ -43,7 +43,7 @@ tr:nth-child(odd)
 .card_unit
 	float: left
 	width: 20%
-	height: 130px
+	height: 120px
 .card
 	width: 92%
 	height: 71%
@@ -99,6 +99,24 @@ button:hover
 .clubs .value, .spades .value
 	color: black
 
+@media (min-width: 480px)
+	.card_unit
+		height: 180px
+	.cards, .buttons
+		clear: both
+		max-width: 460px
+	.card
+		border: 3px solid white
+		margin: 5px 7px
+		.suit
+			margin: 36% auto 0 auto
+		.value
+			font-size: 35px
+	button, .message, table
+		font-size: 16px
+	button
+		margin: 0 7px
+		height: 30px
 
 @media (min-width: 760px)
 	.card_unit
@@ -108,7 +126,6 @@ button:hover
 		max-width: 760px
 	.card
 		border: 3px solid white
-		margin: 7px
 		.suit
 			margin: 36% auto 0 auto
 		.value
@@ -118,7 +135,6 @@ button:hover
 	button, .message, table
 		font-size: 22px
 	button
-		margin: 0 7px
 		height: 50px
 
 
@@ -131,12 +147,10 @@ button:hover
 	.card
 		border: 3px solid white
 		margin: 7px
-		.suit
-			margin: 35% auto 0 auto
-		.value
-			font-size: 70px
-	.card.hold
-		border: 3px solid red
+	.card .suit
+		margin: 35% auto 0 auto
+	.card .value
+		font-size: 70px
 	button, .message
 		font-size: 32px
 	button
@@ -151,10 +165,10 @@ button:hover
 		max-width: 1200px
 	.card
 		border: 5px solid white
-		.value
-			font-size: 80px
 	.card.hold
 		border: 5px solid red
+	.card .value
+		font-size: 80px
 	button, .message
 		font-size: 40px
 	button
