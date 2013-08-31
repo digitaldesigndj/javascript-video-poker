@@ -82,6 +82,7 @@ javascript: 'poker.js'
 	</tbody>
 </table>
 
+
 <div class="credits message" data-bind="text: credits_message"></div>
 
 <div class="message" data-bind="text: message"></div>

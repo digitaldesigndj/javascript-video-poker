@@ -13,7 +13,7 @@ table
 	border: 1px solid yellow
 	border-collapse: collapse
 	font-weight: bold
-	font-size: 16px
+	font-size: 12px
 td
 	border-left: 1px solid yellow
 	padding: 0 4px
@@ -27,74 +27,113 @@ tr:nth-child(odd)
 
 .message
 	text-transform: uppercase
-	font-size: 22px
-	padding: 5px 10px 0 10px
-	width: 45%
+	font-size: 14px
+	padding: 5px 10px 5px 10px
+	width: 55%
 	float: left
 .credits
 	float: right
 	text-align: right
+	width: 30%
 
 .cards, .buttons
 	clear: both
-	max-width: 760px
+	max-width: 300px
 	margin: 0 auto
 .card_unit
 	float: left
-	width: 152px
-	height: 275px
+	width: 20%
+	height: 130px
 .card
-	width: 140px
-	height: 195px
+	width: 92%
+	height: 71%
 	background-color: white
-	border: 3px solid white
+	border: 2px solid white
 	border-radius: 5px
-	margin: 7px
+	margin: 0
 	position: relative
 	box-shadow: inset 0 0 1px 1px black;
 	.suit
-		width: 100px
-		height: 133px
-		background-image: url(suits_sprite.png)
-		background-size: 400px 133px
-		margin: 50px auto 0 auto
+		width: 73%
+		height: 68%
+		background-size: 100% 100%
+		margin: 42% auto 0 auto
 	.value
 		position: absolute
-		font-size: 50px
+		font-size: 30px
 		text-shadow: none
 		font-weight: bold
 		top: 0px
 		left: 10px
 .card.hold
-	border: 3px solid red
+	border: 2px solid red
 button
-	width: 140px
-	height: 50px
+	width: 94%
+	height: 30px
 	background: yellow
-	margin: 5px 8px
+	margin: 1px
 	border: none
 	border-radius: 10px
-	font-size: 22px
+	font-size: 14px
 	font-weight: bold
 button:hover
 	background: darken( yellow, 3 )
 
 .buttons button
 	float: right
-	width: 200px
+	width: 45%
+	height: 50px
 
 .undefined
 	background: navy
 .diamonds .suit
-	background-position: 0 0
+	background-image: url(diamond.svg)
 .clubs .suit
-	background-position: -100px 0
+	background-image: url(club.svg)
 .hearts .suit
-	background-position: -200px 0
+	background-image: url(heart.svg)
 .spades .suit
-	background-position: -300px 0
+	background-image: url(spade.svg)
 
 .diamonds .value, .hearts .value
 	color: red
 .clubs .value, .spades .value
 	color: black
+
+
+@media (min-width: 760px)
+	.card_unit
+		height: 280px
+	.cards, .buttons
+		clear: both
+		max-width: 760px
+	.card
+		border: 3px solid white
+		margin: 7px
+		.suit
+			margin: 36% auto 0 auto
+		.value
+			font-size: 50px
+	.card.hold
+		border: 3px solid red
+	button, .message, table
+		font-size: 22px
+
+
+@media (min-width: 980px)
+	.card_unit
+		height: 340px
+	.cards, .buttons
+		clear: both
+		max-width: 980px
+	.card
+		border: 3px solid white
+		margin: 7px
+		.suit
+			margin: 35% auto 0 auto
+		.value
+			font-size: 70px
+	.card.hold
+		border: 3px solid red
+	button
+		font-size: 32px

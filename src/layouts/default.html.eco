@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html manifest="poker.appcache">
 <head>
 	<!-- Standard Meta -->
 	<meta charset="utf-8" />
@@ -14,10 +11,10 @@
 
 	<!-- Site Properities -->
 	<title>Video Poker</title>
-	<meta name="description" content="Open source video poker in JavaScript" />
+	<meta name="description" content="Open source video poker in HTML5/JavaScript" />
 	<meta name="keywords" content="video poker, online, open source" />
 
-	<link  rel="stylesheet" href="poker.css" />
+	<link rel="stylesheet" href="poker.css" />
 
 	<!-- Icons -->
 	<!-- Favicon -->
@@ -39,9 +36,6 @@
 
 </head>
 <body>
-	<!--[if lt IE 7]>
-		<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-	<![endif]-->
 	<%- @content %>
 	<%- @getBlock('scripts').add(@scripts).toHTML() %>
 </body>
