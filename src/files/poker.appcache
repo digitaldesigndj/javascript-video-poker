@@ -9,8 +9,11 @@ poker.css
 # javascript
 bundle.js
 
-# images
-suits_sprite.png
+# suits
+heart.svg
+club.svg
+diamond.svg
+spade.svg
 
 # icons
 ico/favicon.png
