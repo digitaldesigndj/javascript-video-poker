@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html manifest="poker.appcache">
+<!-- <html manifest="poker.appcache"> -->
+<html>
 <head>
 	<!-- Standard Meta -->
 	<meta charset="utf-8" />
