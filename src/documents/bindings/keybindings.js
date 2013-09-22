@@ -3,7 +3,7 @@ var $     = require( 'jquery-browserify' ),
 	poker = require( '../poker.js' );
 
 $(window).on( 'keypress', function(e){
-	console.log(e.charCode);
+	// console.log(e.charCode);
 	if( e.charCode === 13 ){
 		//enter
 		if( poker.draw_visible() ){
