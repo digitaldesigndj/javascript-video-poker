@@ -9,13 +9,13 @@ $('.label').on('click', function(){
 });
 
 poker.max_credits_message = ko.dependentObservable( function(){
-	console.log( this.credits() );
+	var message = "Max Credits Obtained: ";
 	if( this.max_credits() < this.credits() ){
 		this.max_credits( this.credits() );
-		return "Max Credits Obtained" + this.credits();
+		return message + this.credits();
 	}
 	else{
-		return "Max Credits Obtained" + this.max_credits();
+		return message + this.max_credits();
 	}
 }, poker);
 
