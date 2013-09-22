@@ -1,5 +1,5 @@
 module.exports = {
-	getLocalStorageValue: function( key ){
+	getLocalStorageValue: function( key, default_value ){
 		var value = 0
 		if(key && localStorage.hasOwnProperty(key)){
 			try{
@@ -7,8 +7,7 @@ module.exports = {
 			}catch(e){};
 		}
 		else{
-			// hack, only works because both max and credits have the same default
-			value = 100;
+			value = default_value;
 		}
 		return value; 
 	}

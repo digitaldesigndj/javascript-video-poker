@@ -113,3 +113,4 @@ javascript: 'poker.js'
 </div>
 
 <p data-bind="text: max_credits_message"></p>
+<p>Hands Played: <span data-bind="text: hands_played"></span></p>

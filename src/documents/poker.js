@@ -7,8 +7,9 @@ Cards.init();
 
 var five_cards = Cards.deck.splice(0, 5);
 var saved_credits = 0;
-saved_credits = Storage.getLocalStorageValue('credits');
-max_credits = Storage.getLocalStorageValue('max_credits');
+saved_credits = Storage.getLocalStorageValue('credits', 100);
+max_credits = Storage.getLocalStorageValue('max_credits', 100);
+hands_played = Storage.getLocalStorageValue('hands_played', 0);
 // Load existing value if set
 // var key = 'credits';
 
@@ -30,6 +31,7 @@ module.exports = {
 	credits: ko.observable( saved_credits ),
 	max_credits: ko.observable( max_credits ),
 	bet: ko.observable(5),
+	hands_played: ko.observable( hands_played ),
 
 	card1_suit:  ko.observable(),
 	card1_value: ko.observable(),
@@ -127,6 +129,7 @@ module.exports = {
 		var self = this,
 			five_new_cards = [];
 		if( self.credits() >= self.bet() ){
+			self.hands_played( self.hands_played() + 1 );
 			self.credits( self.credits() - self.bet() );
 			Cards.init();
 
