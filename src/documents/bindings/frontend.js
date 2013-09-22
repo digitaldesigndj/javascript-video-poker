@@ -8,6 +8,17 @@ $('.label').on('click', function(){
 	$('table').css({'display':'block'}).slideUp(1000);
 });
 
+poker.max_credits_message = ko.dependentObservable( function(){
+	console.log( this.credits() );
+	if( this.max_credits() < this.credits() ){
+		this.max_credits( this.credits() );
+		return "Max Credits Obtained" + this.credits();
+	}
+	else{
+		return "Max Credits Obtained" + this.max_credits();
+	}
+}, poker);
+
 // This formats the credits message
 poker.credits_message = ko.dependentObservable( function(){
 	return "Credits: " + this.credits();

@@ -24,6 +24,7 @@ module.exports = {
 	card_front_visible: ko.observable( false ),
 	message: ko.observable( 'Welcome' ),
 	credits: ko.observable( saved_credits ),
+	max_credits: ko.observable( '100' ),
 	bet: ko.observable(5),
 
 	card1_suit:  ko.observable(),
