@@ -1,20 +1,24 @@
-var $     = require('jquery-browserify'),
-	ko    = require('knockout'),
-	Cards = require('./cards.js');
+var $       = require('jquery-browserify'),
+	ko      = require('knockout'),
+	Cards   = require('./cards.js');
+	Storage = require('./localStorageValue.js');
 
 Cards.init();
 
 var five_cards = Cards.deck.splice(0, 5);
 var saved_credits = 0;
+saved_credits = Storage.getLocalStorageValue('credits');
+max_credits = Storage.getLocalStorageValue('max_credits');
 // Load existing value if set
-var key = 'credits';
-if(key && localStorage.hasOwnProperty(key)){
-	try{
-		saved_credits = JSON.parse(localStorage.getItem(key))
-	}catch(e){};
-}else{
-	saved_credits = 100;
-}
+// var key = 'credits';
+
+// if(key && localStorage.hasOwnProperty(key)){
+// 	try{
+// 		saved_credits = JSON.parse(localStorage.getItem(key))
+// 	}catch(e){};
+// }else{
+// 	saved_credits = 100;
+// }
 // The credits amout is saveed in `localStorage-bindings.js`
 
 module.exports = {
@@ -24,7 +28,7 @@ module.exports = {
 	card_front_visible: ko.observable( false ),
 	message: ko.observable( 'Welcome' ),
 	credits: ko.observable( saved_credits ),
-	max_credits: ko.observable( '100' ),
+	max_credits: ko.observable( max_credits ),
 	bet: ko.observable(5),
 
 	card1_suit:  ko.observable(),

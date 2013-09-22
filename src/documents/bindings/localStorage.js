@@ -4,7 +4,10 @@ var $     = require( 'jquery-browserify' ),
 
 // Bindings used for localStorage
 
-// Set localStorage Credits here
 poker.credits.subscribe(function(newValue) {
 	localStorage.setItem('credits', newValue );
+});
+
+poker.max_credits.subscribe(function(newValue) {
+	localStorage.setItem('max_credits', newValue );
 });
