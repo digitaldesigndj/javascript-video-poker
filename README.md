@@ -17,6 +17,10 @@ Then visit [http://localhost:9779](http://localhost:9779)
 
 Enter to deal/start game, 1-5 to hold.
 
+## Remove Payout Table
+
+Click on the leftmost column in the table and the payout table with go away. You have to refresh the app to get it back.
+
 ## License
 
 The MIT License (MIT)
