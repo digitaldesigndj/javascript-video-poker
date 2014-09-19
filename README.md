@@ -19,13 +19,20 @@ Enter to deal/start game, 1-5 to hold.
 
 ## Remove Payout Table
 
-Click on the leftmost column in the table and the payout table with go away. You have to refresh the app to get it back.
+Click on the leftmost column in the table and the payout table will go away. You have to refresh the app to get it back. HTML5 LocalStorage means you will not lose your stats, they are stored in the browser.
+
+## ToDo
+
+* Social Login (Google, FB)
+* Database for Stat Tracking
+
+## Disclaimer
+
+Use this code freely, you can even close the source for your own use if you want to. Contributing back would be nice. I'm not a lawyer and I think MIT means: "Don't sue me bro". I'm not in this game for lawsuits. [PLUR](http://en.wikipedia.org/wiki/PLUR).
 
 ## License
 
-The MIT License (MIT)
-[OSI Approved License]
-The MIT License (MIT)
+More Freedom than the MIT License (MIT)
 
 &copy; 2013 Taylor Young
 
@@ -36,8 +43,7 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+The permission notice below shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -46,3 +52,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
