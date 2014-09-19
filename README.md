@@ -2,7 +2,9 @@
 
 A Simple poker game
 
-## Get Started
+## Developers
+
+Get started locally (with *nix npm and git)
 
 ```bash
 git clone https://github.com/digitaldesigndj/javascript-video-poker poker
@@ -11,24 +13,29 @@ npm install
 docpad run
 ```
 
-Then visit [http://localhost:9779](http://localhost:9779)
+Then visit [http://localhost:9887](http://localhost:9887)
+
+**set the environment variable `PORT` to use a custom one**
 
 ## Keyboard Controls
 
-Enter to deal/start game, 1-5 to hold.
+`Enter` to deal/start game, `1-5` to hold.
 
 ## Remove Payout Table
 
-Click on the leftmost column in the table and the payout table will go away. You have to refresh the app to get it back. HTML5 LocalStorage means you will not lose your stats, they are stored in the browser.
+**hidden features**
+
+Click on the leftmost column in the table and the payout table will go away. You have to refresh the app to get it back. HTML5 LocalStorage means you will not lose your stats, they are stored in the browser. They don't sync yet.
 
 ## ToDo
 
 * Social Login (Google, FB)
 * Database for Stat Tracking
+* Editable/Selectable Payout Tables
 
 ## Disclaimer
 
-Use this code freely, you can even close the source for your own use if you want to. Contributing back would be nice. I'm not a lawyer and I think MIT means: "Don't sue me bro". I'm not in this game for lawsuits. [PLUR](http://en.wikipedia.org/wiki/PLUR).
+Use this code freely, you can even close the source for your own use if you want to. Contributing back would be nice. I'm not a lawyer and I think MIT means: "Don't sue me bro". I'm not in this game for lawsuits, you don't even need to credit me. It's just code! [PLUR](http://en.wikipedia.org/wiki/PLUR).
 
 ## License
 
@@ -52,4 +59,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
