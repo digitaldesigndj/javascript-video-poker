@@ -1,3 +1,8 @@
+// Disables copy selection in iOS
+*
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+
 body
 	margin: 0
 	background: blue
@@ -105,17 +110,17 @@ tr:nth-child(odd)
 		font-weight: bold
 		top: 0px
 		left: 10px
+
 .card.hold
 	background: red
+
 button
-	width: 94%
-	height: 30px
-	background: yellow
-	margin: 1px
-	border: none
-	border-radius: 10px
-	font-size: 14px
+	width: 100%
+	background: #ff0
+	padding: 15px
+	border: 2px solid blue
 	font-weight: bold
+
 button:hover
 	background: darken( yellow, 3 )
 
@@ -144,17 +149,12 @@ button:hover
 		font-size: 35px
 	button, .message, table
 		font-size: 16px
-	button
-		margin: 0 7px
-		height: 30px
 
 @media (min-width: 760px)
 	.card .value
 		font-size: 50px
 	button, .message, table
 		font-size: 22px
-	button
-		height: 50px
 	.tab-scoring
 		padding: 4px 12px
 	.card
@@ -167,8 +167,6 @@ button:hover
 		font-size: 70px
 	button, .message, .tab-scoring
 		font-size: 32px
-	button
-		height: 70px
 	.tab-scoring
 		bottom: -47px
 
@@ -177,8 +175,6 @@ button:hover
 		font-size: 80px
 	button, .message, .tab-scoring
 		font-size: 40px
-	button
-		height: 70px
 	.tab-scoring
 		bottom: -56px
 
