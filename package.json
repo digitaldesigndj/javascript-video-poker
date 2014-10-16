@@ -7,18 +7,18 @@
     "npm": "1.2"
   },
   "dependencies": {
-    "docpad": "~6.51.6",
-    "docpad-plugin-eco": "~2.0.2",
-    "docpad-plugin-stylus": "~2.4.0",
-    "docpad-plugin-partials": "~2.7.2",
-    "jquery-browserify": "~1.x",
-    "plugin": "~0.3.x",
-    "knockout": "~2.x",
+    "bal-util": "~2.0.x",
     "browserify": "~2.26.0",
-    "bal-util": "~2.0.x"
+    "docpad": "~6.69.1",
+    "docpad-plugin-eco": "~2.1.0",
+    "docpad-plugin-partials": "~2.9.1",
+    "docpad-plugin-stylus": "~2.8.0",
+    "jquery-browserify": "~1.x",
+    "knockout": "~2.x",
+    "plugin": "~0.3.x"
   },
   "devDependencies": {
-    "docpad-plugin-livereload": "~2.5.1"
+    "docpad-plugin-livereload": "~2.6.0"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
