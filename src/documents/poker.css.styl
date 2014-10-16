@@ -10,10 +10,12 @@ body
 table
 	width: 100%
 	background: navy
-	border: 1px solid yellow
+	border-bottom: 2px solid yellow
 	border-collapse: collapse
 	font-weight: bold
 	font-size: 12px
+	display: block
+
 td
 	border-left: 1px solid yellow
 	padding: 0 4px
@@ -24,6 +26,22 @@ tr:nth-child(even)
 	background: lighten(navy, 5)
 tr:nth-child(odd)
 	background: navy
+
+.score-holder
+	position: relative
+
+.tab 
+	width: 100px
+	background: #00004d
+	border: 2px solid #ff0
+	position: absolute
+	bottom: -30px
+	left: 80%
+	border-radius: 0 0 5px 5px
+	font-size: 16px
+	text-align: center
+	padding: 5px
+	cursor: pointer
 
 .message
 	text-transform: uppercase
