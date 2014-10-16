@@ -27,6 +27,17 @@ tr:nth-child(even)
 tr:nth-child(odd)
 	background: navy
 
+.text-right 
+	float: right
+
+.clearfix:before,
+.clearfix:after
+	display: table
+	content: " "
+
+.clearfix:after
+	clear: both
+
 .score-holder
 	position: relative
 
@@ -35,20 +46,21 @@ tr:nth-child(odd)
 	background: #00004d
 	border: 2px solid #ff0
 	position: absolute
-	bottom: -30px
-	left: 80%
+	bottom: -28px
+	right: 130px
 	border-radius: 0 0 5px 5px
 	font-size: 16px
 	text-align: center
-	padding: 5px
+	padding: 4px
 	cursor: pointer
 
 .message
 	text-transform: uppercase
 	font-size: 14px
-	padding: 5px 10px 5px 10px
-	width: 55%
-	float: left
+	width: 98%
+	margin: 0 0px
+	padding: 5px 1%
+	clear: both
 .credits
 	float: right
 	text-align: right
@@ -56,26 +68,29 @@ tr:nth-child(odd)
 
 .cards, .buttons
 	clear: both
-	max-width: 300px
 	margin: 0 auto
+.cards
+	margin-bottom: 10px
 .card_unit
 	float: left
 	width: 20%
-	height: 120px
 .card
 	width: 92%
-	height: 71%
+	// height: 71%
 	background-color: white
 	border: 2px solid white
 	border-radius: 5px
 	margin: 0
 	position: relative
-	box-shadow: inset 0 0 1px 1px black;
+	box-shadow: inset 0 0 1px 1px black
+	padding-bottom: 135%
 	.suit
 		width: 73%
 		height: 68%
 		background-size: 100% 100%
-		margin: 42% auto 0 auto
+		position: absolute
+		left: 13.5%
+		top: 20%
 	.value
 		position: absolute
 		font-size: 30px
@@ -118,15 +133,8 @@ button:hover
 	color: black
 
 @media (min-width: 480px)
-	.card_unit
-		height: 180px
-	.cards, .buttons
-		clear: both
-		max-width: 460px
 	.card
 		margin: 5px 7px
-		.suit
-			margin: 36% auto 0 auto
 		.value
 			font-size: 35px
 	button, .message, table
@@ -136,15 +144,8 @@ button:hover
 		height: 30px
 
 @media (min-width: 760px)
-	.card_unit
-		height: 280px
-	.cards, .buttons
-		clear: both
-		max-width: 760px
 	.card
 		border: 3px solid white
-		.suit
-			margin: 36% auto 0 auto
 		.value
 			font-size: 50px
 	.card.hold
@@ -153,60 +154,45 @@ button:hover
 		font-size: 22px
 	button
 		height: 50px
+	.tab-scoring
+		right: 180px
+		bottom: -35px
+		padding: 4px 12px
 
 
 @media (min-width: 980px)
-	.card_unit
-		height: 340px
-	.cards, .buttons
-		clear: both
-		max-width: 980px
 	.card
 		border: 3px solid white
 		margin: 7px
-	.card .suit
-		margin: 35% auto 0 auto
 	.card .value
 		font-size: 70px
-	button, .message
+	button, .message, .tab-scoring
 		font-size: 32px
 	button
 		height: 70px
 
 
 @media (min-width: 1200px)
-	.card_unit
-		height: 420px
-	.cards, .buttons
-		clear: both
-		max-width: 1200px
 	.card
 		border: 5px solid white
 	.card.hold
 		border: 5px solid red
 	.card .value
 		font-size: 80px
-	button, .message
+	button, .message, .tab-scoring
 		font-size: 40px
 	button
 		height: 70px
 
 
 @media (min-width: 1400px)
-	.card_unit
-		height: 500px
-		button
-			margin:10px
-	.cards, .buttons
-		clear: both
-		max-width: 1400px
 	.card
 		border: 7px solid white
 		.value
 			font-size: 90px
 	.card.hold
 		border: 7px solid red
-	button, .message
-		font-size: 40px
-	button
-		height: 70px
+	// button, .message, .tab-scoring
+	// 	font-size: 40px
+	// button
+	// 	height: 70px

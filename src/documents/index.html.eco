@@ -106,13 +106,15 @@ javascript: 'poker.js'
 			">HOLD</button>
 		</div>
 	<% end %>
+	<div class="clearfix"></div>
 </div>
 
-<div class="buttons">
-	<button data-bind="click: draw, event: { touchend: draw }, visible: draw_visible">DRAW</button>
-	<button data-bind="click: newGame, event: { touchend: newGame }, visible: new_game_visible">DEAL</button>
-	<button data-bind="click: incrementBet, event: { touchend: incrementBet }">Bet <span data-bind="text: bet">1</span></button>
-</div>
+<div class="control-panel">
+	<div class="buttons">
+		<button data-bind="click: draw, event: { touchend: draw }, visible: draw_visible">DRAW</button>
+		<button data-bind="click: newGame, event: { touchend: newGame }, visible: new_game_visible">DEAL</button>
+		<button data-bind="click: incrementBet, event: { touchend: incrementBet }">Bet <span data-bind="text: bet">1</span></button>
+	</div>
 
-<p data-bind="text: max_credits_message"></p>
-<p>Hands Played: <span data-bind="text: hands_played"></span></p>
+	<div class="message"><span data-bind="text: max_credits_message"></span> <span class="text-right">Hands Played: <span data-bind="text: hands_played"></span></span></div>
+</div>
