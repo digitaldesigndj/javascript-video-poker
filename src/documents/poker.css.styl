@@ -12,25 +12,29 @@ body
 	text-shadow: 2px 2px 0 black
 	font-size: 22px
 
-table
-	width: 100%
-	background: navy
+.score-holder
+	position: relative
+.scoring
 	border-bottom: 2px solid yellow
-	border-collapse: collapse
-	font-weight: bold
 	font-size: 12px
-	display: block
 
-td
-	padding: 0 4px
-	text-align: right
-.column1, .column2, .column3, .column4, .column5
+.column
 	border-left: 2px solid yellow
-.label
+	text-align: center
+	width: calc( 14% - 2px )
+	float: left
+.hand
 	text-align: left
-tr:nth-child(even)
+	width: 30%
+	float: left
+	border-width: 0
+	// Prevent line breaks
+
+.column > div:first-child
+	border-bottom: 2px solid yellow
+.column > div:nth-child(even)
 	background: lighten(navy, 5)
-tr:nth-child(odd)
+.column > div:nth-child(odd)
 	background: navy
 
 .text-right 
@@ -50,13 +54,14 @@ tr:nth-child(odd)
 .tab 
 	background: navy
 	border: 2px solid yellow
+	border-top: 0
 	position: absolute
-	bottom: -28px
+	bottom: -26px
 	right: 25%
 	border-radius: 0 0 5px 5px
 	font-size: 16px
 	text-align: center
-	padding: 4px
+	padding: 3px 4px
 	cursor: pointer
 
 .message
@@ -144,16 +149,22 @@ button:hover
 .clubs .value, .spades .value
 	color: black
 
+@media (min-width: 568px)
+	.cards
+		margin-bottom: 0
+	button
+		padding: 12px
+
 @media (min-width: 480px)
 	.card .value
 		font-size: 35px
-	button, .message, table
+	button, .message, .tab, .scoring
 		font-size: 16px
 
 @media (min-width: 760px)
 	.card .value
 		font-size: 50px
-	button, .message, table
+	button, .message, .tab, .scoring
 		font-size: 22px
 	.tab-scoring
 		padding: 4px 12px
@@ -165,7 +176,7 @@ button:hover
 @media (min-width: 980px)
 	.card .value
 		font-size: 70px
-	button, .message, .tab-scoring
+	button, .message, .tab, .scoring
 		font-size: 32px
 	.tab-scoring
 		bottom: -47px
@@ -173,7 +184,7 @@ button:hover
 @media (min-width: 1200px)
 	.card .value
 		font-size: 80px
-	button, .message, .tab-scoring
+	button, .message, .tab, .scoring
 		font-size: 40px
 	.tab-scoring
 		bottom: -56px

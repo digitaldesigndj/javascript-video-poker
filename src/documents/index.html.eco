@@ -4,83 +4,87 @@ title: 'Poker'
 css: 'poker.css'
 javascript: 'poker.js'
 ---
+<div class="howto">
+	<h2>How to play video poker.</h2>
+</div>
+
 <div class="score-holder">
-	<table>
-		<tbody>
-			<tr>
-				<td class="label">Royal Flush</td>
-				<td class="column1">250</td>
-				<td class="column2">500</td>
-				<td class="column3">750</td>
-				<td class="column4">1000</td>
-				<td class="column5">4000</td>
-			</tr>
-			<tr>
-				<td class="label">Straight Flush</td>
-				<td class="column1">50</td>
-				<td class="column2">100</td>
-				<td class="column3">150</td>
-				<td class="column4">200</td>
-				<td class="column5">250</td>
-			</tr>
-			<tr>
-				<td class="label">Four of a Kind</td>
-				<td class="column1">25</td>
-				<td class="column2">50</td>
-				<td class="column3">75</td>
-				<td class="column4">100</td>
-				<td class="column5">125</td>
-			</tr>
-			<tr>
-				<td class="label">Full House</td>
-				<td class="column1">9</td>
-				<td class="column2">18</td>
-				<td class="column3">27</td>
-				<td class="column4">36</td>
-				<td class="column5">45</td>
-			</tr>
-			<tr>
-				<td class="label">Flush</td>
-				<td class="column1">6</td>
-				<td class="column2">12</td>
-				<td class="column3">18</td>
-				<td class="column4">24</td>
-				<td class="column5">30</td>
-			</tr>
-			<tr>
-				<td class="label">Straight</td>
-				<td class="column1">4</td>
-				<td class="column2">8</td>
-				<td class="column3">12</td>
-				<td class="column4">16</td>
-				<td class="column5">20</td>
-			</tr>
-			<tr>
-				<td class="label">Three of a Kind</td>
-				<td class="column1">3</td>
-				<td class="column2">6</td>
-				<td class="column3">9</td>
-				<td class="column4">12</td>
-				<td class="column5">15</td>
-			</tr>
-			<tr>
-				<td class="label">Two Pairs</td>
-				<td class="column1">2</td>
-				<td class="column2">4</td>
-				<td class="column3">6</td>
-				<td class="column4">8</td>
-				<td class="column5">10</td>
-			</tr>
-			<tr>
-				<td class="label">Jacks or Better</td>
-				<td class="column1">1</td>
-				<td class="column2">2</td>
-				<td class="column3">3</td>
-				<td class="column4">4</td>
-				<td class="column5">5</td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="scoring">
+		<div class="column hand">
+			<div>Bet</div>
+			<div>Royal Flush</div>
+			<div>Straight Flush</div>
+			<div>Four of a Kind</div>
+			<div>Full House</div>
+			<div>Flush</div>
+			<div>Straight</div>
+			<div>Three of a Kind</div>
+			<div>Two Pairs</div>
+			<div>Jacks or Better</div>
+		</div>
+		<div class="column">
+			<div>1</div>
+			<div>250</div>
+			<div>50</div>
+			<div>25</div>
+			<div>9</div>
+			<div>6</div>
+			<div>4</div>
+			<div>3</div>
+			<div>2</div>
+			<div>1</div>
+		</div>
+		<div class="column">
+			<div>2</div>
+			<div>500</div>
+			<div>100</div>
+			<div>50</div>
+			<div>18</div>
+			<div>12</div>
+			<div>8</div>
+			<div>6</div>
+			<div>4</div>
+			<div>2</div>
+		</div>
+		<div class="column">
+			<div>3</div>
+			<div>750</div>
+			<div>150</div>
+			<div>75</div>
+			<div>27</div>
+			<div>18</div>
+			<div>12</div>
+			<div>9</div>
+			<div>6</div>
+			<div>3</div>
+		</div>
+		<div class="column">
+			<div>4</div>
+			<div>1000</div>
+			<div>200</div>
+			<div>100</div>
+			<div>36</div>
+			<div>24</div>
+			<div>16</div>
+			<div>12</div>
+			<div>8</div>
+			<div>4</div>
+		</div>
+		<div class="column">
+			<div>5</div>
+			<div>4000</div>
+			<div>250</div>
+			<div>125</div>
+			<div>45</div>
+			<div>30</div>
+			<div>20</div>
+			<div>15</div>
+			<div>10</div>
+			<div>5</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="clearfix"></div>
 	<div class="tab tab-scoring">Scoring</div>
 </div>
 

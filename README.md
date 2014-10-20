@@ -25,7 +25,7 @@ Then visit [http://localhost:9887](http://localhost:9887)
 
 **hidden features**
 
-Click on the leftmost column in the table and the payout table will go away. You have to refresh the app to get it back. HTML5 LocalStorage means you will not lose your stats, they are stored in the browser. They don't sync yet.
+Use the score tab to hide and show the payout table. You have to refresh the app to get it back. HTML5 LocalStorage means you will not lose your stats, they are stored in the browser. They don't sync yet.
 
 ## ToDo
 
