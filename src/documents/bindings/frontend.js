@@ -5,10 +5,12 @@ var $     = require( 'jquery-browserify' ),
 // Frontend display bindings
 
 $('.tab-scoring').on('click', function(){
-	$('table').slideToggle(1000);
+	$('.scoring').slideToggle(1000);
 });
 
-$('table').hide();
+$('.scoring').hide();
+
+
 
 poker.max_credits_message = ko.dependentObservable( function(){
 	var message = "Max Credits Obtained: ";
