@@ -88,6 +88,15 @@ body
 .card_unit
 	float: left
 	width: 20%
+	position: relative
+	-webkit-perspective: 600
+
+.card.back
+	// backface-visibility: visible
+	position: absolute
+	margin: 0 1%
+	.card-inner
+		background: navy
 .card
 	width: 98%
 	background-color: white
@@ -95,6 +104,10 @@ body
 	margin: 1%
 	position: relative
 	padding-bottom: 135%
+	transition: 0.6s
+	transform-style: preserve-3d
+	transform: rotateY( 180deg )
+	backface-visibility: hidden
 	.card-inner
 		box-shadow: inset 0 0 2px 0 #222
 		background: white
@@ -118,6 +131,12 @@ body
 		font-weight: bold
 		top: 0px
 		left: 10px
+
+.card.diamonds,
+.card.clubs,
+.card.hearts,
+.card.spades
+	transform: rotateY( 0deg )
 
 .card.hold
 	background: red

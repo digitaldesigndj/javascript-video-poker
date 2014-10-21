@@ -95,14 +95,19 @@ javascript: 'poker.js'
 <div class="cards">
 	<% for i in [1,2,3,4,5]: %>
 		<div class="card_unit">
-			<div class="card" data-bind="
-				css: card<%=i%>_class,
-				event: { touchstart: card<%=i%>_hold_toggle },
-				click: card<%=i%>_hold_toggle
-			">
-				<div class="card-inner">
-					<div class="value" data-bind="text: card<%=i%>_value_symbol, visible: card_front_visible"></div>
-					<div class="suit" data-bind="visible: card_front_visible"></div>
+			<div class="container">
+				<div class="card back">
+					<div class="card-inner"></div>
+				</div>
+				<div class="card" data-bind="
+					css: card<%=i%>_class,
+					event: { touchstart: card<%=i%>_hold_toggle },
+					click: card<%=i%>_hold_toggle
+				">
+					<div class="card-inner">
+						<div class="value" data-bind="text: card<%=i%>_value_symbol, visible: card_front_visible"></div>
+						<div class="suit" data-bind="visible: card_front_visible"></div>
+					</div>
 				</div>
 			</div>
 			<button data-bind="

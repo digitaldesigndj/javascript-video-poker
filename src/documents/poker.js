@@ -127,7 +127,8 @@ module.exports = {
 	},
 	newGame: function(){
 		var self = this,
-			five_new_cards = [];
+			five_new_cards = []
+			delay = 100;
 		if( self.credits() >= self.bet() ){
 			self.hands_played( self.hands_played() + 1 );
 			self.credits( self.credits() - self.bet() );
@@ -141,20 +142,45 @@ module.exports = {
 
 			five_new_cards = Cards.deck.splice(0, 5);
 
-			self.card1_suit( five_new_cards[0].suit );
-			self.card1_value( five_new_cards[0].value );
+			self.card1_suit( 'undefined' );
+			self.card1_value( '' );
+			self.card2_suit( 'undefined' );
+			self.card2_value( '' );
+			self.card3_suit( 'undefined' );
+			self.card3_value( '' );
+			self.card4_suit( 'undefined' );
+			self.card4_value( '' );
+			self.card5_suit( 'undefined' );
+			self.card5_value( '' );
 
-			self.card2_suit( five_new_cards[1].suit );
-			self.card2_value( five_new_cards[1].value );
+			setTimeout( function() {
 
-			self.card3_suit( five_new_cards[2].suit );
-			self.card3_value( five_new_cards[2].value );
+				setTimeout( function() {
+					self.card1_suit( five_new_cards[0].suit );
+					self.card1_value( five_new_cards[0].value );
+				}, 2 * delay );
 
-			self.card4_suit( five_new_cards[3].suit );
-			self.card4_value( five_new_cards[3].value );
+				setTimeout( function() {
+					self.card2_suit( five_new_cards[1].suit );
+					self.card2_value( five_new_cards[1].value );
+				}, 3 * delay );
 
-			self.card5_suit( five_new_cards[4].suit );
-			self.card5_value( five_new_cards[4].value );
+				setTimeout( function() {
+					self.card3_suit( five_new_cards[2].suit );
+					self.card3_value( five_new_cards[2].value );
+				}, 4 * delay );
+
+				setTimeout( function() {
+					self.card4_suit( five_new_cards[3].suit );
+					self.card4_value( five_new_cards[3].value );
+				}, 5 * delay );
+
+				setTimeout( function() {
+					self.card5_suit( five_new_cards[4].suit );
+					self.card5_value( five_new_cards[4].value );
+				}, 6 * delay );
+
+			}, 1 * delay );
 
 			self.draw_visible( true );
 			self.new_game_visible( false );
