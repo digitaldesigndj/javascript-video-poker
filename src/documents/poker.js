@@ -138,7 +138,9 @@ module.exports = {
 		self.card4_hold( false );
 		self.card5_hold( false );
 
-		self.scoring();
+		setTimeout( function() {
+			self.scoring();
+		}, 1000 );
 	},
 	incrementBet: function(){
 		self = this;

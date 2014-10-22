@@ -96,7 +96,9 @@ javascript: 'poker.js'
 	<% for i in [1,2,3,4,5]: %>
 		<div class="card_unit">
 			<div class="container">
-				<div class="card back">
+				<div class="card back"data-bind="
+					css: card<%=i%>_class
+				">
 					<div class="card-inner"></div>
 				</div>
 				<div class="card" data-bind="
