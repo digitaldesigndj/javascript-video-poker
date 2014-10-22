@@ -1,11 +1,11 @@
 var $       = require('jquery-browserify'),
 	ko      = require('knockout'),
-	Cards   = require('./cards.js');
+	Deck   = require('./deck.js');
 	Storage = require('./localStorageValue.js');
 
-Cards.init();
+Deck.init();
 
-var five_cards = Cards.deck.splice(0, 5);
+var five_cards = Deck.cards.splice(0, 5);
 var saved_credits = 0;
 saved_credits = Storage.getLocalStorageValue('credits', 100);
 max_credits = Storage.getLocalStorageValue('max_credits', 100);
@@ -83,27 +83,27 @@ module.exports = {
 			return;
 		}
 		if( !self.card1_hold() ){
-			var card = Cards.deck.splice( 0, 1 );
+			var card = Deck.cards.splice( 0, 1 );
 			self.card1_suit( card[0].suit );
 			self.card1_value( card[0].value );
 		}
 		if( !self.card2_hold() ){
-			var card = Cards.deck.splice( 0, 1 );
+			var card = Deck.cards.splice( 0, 1 );
 			self.card2_suit( card[0].suit );
 			self.card2_value( card[0].value );
 		}
 		if( !self.card3_hold() ){
-			var card = Cards.deck.splice( 0, 1 );
+			var card = Deck.cards.splice( 0, 1 );
 			self.card3_suit( card[0].suit );
 			self.card3_value( card[0].value );
 		}
 		if( !self.card4_hold() ){
-			var card = Cards.deck.splice( 0, 1 );
+			var card = Deck.cards.splice( 0, 1 );
 			self.card4_suit( card[0].suit );
 			self.card4_value( card[0].value );
 		}
 		if( !self.card5_hold() ){
-			var card = Cards.deck.splice( 0, 1 );
+			var card = Deck.cards.splice( 0, 1 );
 			self.card5_suit( card[0].suit );
 			self.card5_value( card[0].value );
 		}
@@ -132,7 +132,7 @@ module.exports = {
 		if( self.credits() >= self.bet() ){
 			self.hands_played( self.hands_played() + 1 );
 			self.credits( self.credits() - self.bet() );
-			Cards.init();
+			Deck.init();
 
 			this.card1_hold(false);
 			this.card2_hold(false);
@@ -140,7 +140,7 @@ module.exports = {
 			this.card4_hold(false);
 			this.card5_hold(false);
 
-			five_new_cards = Cards.deck.splice(0, 5);
+			five_new_cards = Deck.cards.splice(0, 5);
 
 			self.card1_suit( 'undefined' );
 			self.card1_value( '' );

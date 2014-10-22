@@ -1,13 +1,13 @@
 module.exports = {
-	deck: [],
+	cards: [],
 	init: function(){
 		self = this;
 		// Remove all the cards from the deck
-		self.deck = [];
+		self.cards = [];
 		// Adds cards to the deck
 		self.setupCards();
 		// Shuffle the deck
-		self.deck = self.shuffle( self.deck );
+		self.cards = self.shuffle( self.cards );
 	},
 	setupCards: function(){
 		var self   = this,
@@ -15,7 +15,7 @@ module.exports = {
 			values = ['ace', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king'];
 		for ( var suit_index = 0; suit_index < suits.length; suit_index++ ){
 			for ( var value_index = 0; value_index < values.length; value_index++ ){
-				self.deck.push( {'suit': suits[suit_index],'value': values[value_index]} )
+				self.cards.push( {'suit': suits[suit_index],'value': values[value_index]} )
 			}
 		}
 	},
