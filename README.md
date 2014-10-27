@@ -29,6 +29,10 @@ Use the score tab to hide and show the payout table. You have to refresh the app
 
 ## ToDo
 
+* Hold All Button
+
+#### Far Future
+
 * Social Login (Google, FB)
 * Database for Stat Tracking
 * Editable/Selectable Payout Tables
