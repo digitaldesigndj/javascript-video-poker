@@ -83,50 +83,60 @@ module.exports = {
 			return;
 		}
 
-		if( !self.card1_hold() ){
-			self.card1_suit( 'undefined' );
-			self.card1_value( '' );
+		// Held All 
+		if( self.card1_hold() && self.card2_hold() && self.card3_hold() && self.card4_hold() && self.card5_hold() ) {
+			self.scoring();
+		} else {
+
+			if( !self.card1_hold() ){
+				self.card1_suit( 'undefined' );
+				self.card1_value( '' );
+				setTimeout( function() {
+					var card = Deck.cards.splice( 0, 1 );
+					self.card1_suit( card[0].suit );
+					self.card1_value( card[0].value );
+				}, 600 );
+			}
+			if( !self.card2_hold() ){
+				self.card2_suit( 'undefined' );
+				self.card2_value( '' );
+				setTimeout( function() {
+					var card = Deck.cards.splice( 0, 1 );
+					self.card2_suit( card[0].suit );
+					self.card2_value( card[0].value );
+				}, 600 );
+			}
+			if( !self.card3_hold() ){
+				self.card3_suit( 'undefined' );
+				self.card3_value( '' );
+				setTimeout( function() {
+					var card = Deck.cards.splice( 0, 1 );
+					self.card3_suit( card[0].suit );
+					self.card3_value( card[0].value );
+				}, 600 );
+			}
+			if( !self.card4_hold() ){
+				self.card4_suit( 'undefined' );
+				self.card4_value( '' );
+				setTimeout( function() {
+					var card = Deck.cards.splice( 0, 1 );
+					self.card4_suit( card[0].suit );
+					self.card4_value( card[0].value );
+				}, 600 );
+			}
+			if( !self.card5_hold() ){
+				self.card5_suit( 'undefined' );
+				self.card5_value( '' );
+				setTimeout( function() {
+					var card = Deck.cards.splice( 0, 1 );
+					self.card5_suit( card[0].suit );
+					self.card5_value( card[0].value );
+				}, 600 );
+			}
+
 			setTimeout( function() {
-				var card = Deck.cards.splice( 0, 1 );
-				self.card1_suit( card[0].suit );
-				self.card1_value( card[0].value );
-			}, 600 );
-		}
-		if( !self.card2_hold() ){
-			self.card2_suit( 'undefined' );
-			self.card2_value( '' );
-			setTimeout( function() {
-				var card = Deck.cards.splice( 0, 1 );
-				self.card2_suit( card[0].suit );
-				self.card2_value( card[0].value );
-			}, 600 );
-		}
-		if( !self.card3_hold() ){
-			self.card3_suit( 'undefined' );
-			self.card3_value( '' );
-			setTimeout( function() {
-				var card = Deck.cards.splice( 0, 1 );
-				self.card3_suit( card[0].suit );
-				self.card3_value( card[0].value );
-			}, 600 );
-		}
-		if( !self.card4_hold() ){
-			self.card4_suit( 'undefined' );
-			self.card4_value( '' );
-			setTimeout( function() {
-				var card = Deck.cards.splice( 0, 1 );
-				self.card4_suit( card[0].suit );
-				self.card4_value( card[0].value );
-			}, 600 );
-		}
-		if( !self.card5_hold() ){
-			self.card5_suit( 'undefined' );
-			self.card5_value( '' );
-			setTimeout( function() {
-				var card = Deck.cards.splice( 0, 1 );
-				self.card5_suit( card[0].suit );
-				self.card5_value( card[0].value );
-			}, 600 );
+				self.scoring();
+			}, 1000 );
 		}
 
 		self.draw_visible( false );
@@ -137,10 +147,7 @@ module.exports = {
 		self.card3_hold( false );
 		self.card4_hold( false );
 		self.card5_hold( false );
-
-		setTimeout( function() {
-			self.scoring();
-		}, 1000 );
+		
 	},
 	incrementBet: function(){
 		self = this;
