@@ -136,11 +136,11 @@ module.exports = {
 
 			setTimeout( function() {
 				self.scoring();
+				self.new_game_visible( true );
 			}, 1000 );
 		}
 
 		self.draw_visible( false );
-		self.new_game_visible( true );
 
 		self.card1_hold( false );
 		self.card2_hold( false );
