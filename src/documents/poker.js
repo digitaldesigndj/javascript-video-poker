@@ -25,8 +25,8 @@ hands_played = Storage.getLocalStorageValue('hands_played', 0);
 module.exports = {
 	hold_visible: ko.observable( false ),
 	draw_visible: ko.observable( false ),
+	popup_visible: ko.observable( false ),
 	new_game_visible: ko.observable( true ),
-	card_front_visible: ko.observable( false ),
 	message: ko.observable( 'Welcome' ),
 	credits: ko.observable( saved_credits ),
 	max_credits: ko.observable( max_credits ),
@@ -216,7 +216,6 @@ module.exports = {
 			self.draw_visible( true );
 			self.new_game_visible( false );
 			self.hold_visible( true );
-			self.card_front_visible( true );
 			self.message( 'Good Luck' );
 		}else{
 			alert( 'You went broke! But this is no casino, have a 100 credits on the house' );
@@ -237,14 +236,21 @@ module.exports = {
 				[9,10,11,12,13],
 				[10,11,12,13,14]
 			],
+			self = this,
 			royal_straight = [10,11,12,13,14],
 			pair_count = 0,
 			triple_count = 0,
 			jacks_or_better = false,
 			straight = false;
 
-		this.hold_visible( false );
+		self.hold_visible( false );
 		self.message( 'You lose, please try again' );
+
+		self.popup_visible( true );
+
+		setTimeout( function() {
+			self.popup_visible( false );
+		}, 1000)
 
 		// 2 Pair, 3 of a Kind, 4 of Kind, Full House
 		$.each( [2,3,4,5,6,7,8,9,10,11,12,13,14], function( i, v ){
