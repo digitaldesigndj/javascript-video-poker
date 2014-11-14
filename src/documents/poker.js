@@ -209,13 +209,14 @@ module.exports = {
 				setTimeout( function() {
 					self.card5_suit( five_new_cards[4].suit );
 					self.card5_value( five_new_cards[4].value );
+					self.draw_visible( true );
+					self.hold_visible( true );
 				}, 7 * delay );
 
 			}, 2 * delay );
 
-			self.draw_visible( true );
+
 			self.new_game_visible( false );
-			self.hold_visible( true );
 			self.card_front_visible( true );
 			self.message( 'Good Luck' );
 		}else{
