@@ -4,7 +4,8 @@ var $     = require( 'jquery-browserify' ),
 
 $(window).on( 'keypress', function(e){
 	// console.log(e.charCode);
-	if( e.charCode === 13 ){
+	// char code 0 for Firefox?
+	if( e.charCode === 13 || e.charCode === 0 ){
 		//enter
 		if( poker.draw_visible() ){
 			poker.draw();
