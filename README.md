@@ -31,11 +31,21 @@ Use the score tab to hide and show the payout table. You have to refresh the app
 
 * Hold All Button
 
-#### Far Future
 
-* Social Login (Google, FB)
+### Tracking
+
+* Track Gone Brokes
+* Reset Hands Played After Broke?
+* Track Max Hands Played
+
+
+#### Further in the future
+
+* Docker Container
 * Database for Stat Tracking
+* Social Login (Google, FB)
 * Editable/Selectable Payout Tables
+
 
 ## Disclaimer
 
