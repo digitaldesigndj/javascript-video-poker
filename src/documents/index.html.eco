@@ -4,16 +4,9 @@ title: 'Poker'
 css: 'poker.css'
 javascript: 'poker.js'
 ---
-
-<div class="score-popup" data-bind="visible: popup_visible">
-	<div data-bind="text: message"></div>
-</div>
-
-<!-- 
 <div class="howto">
 	<h2>How to play video poker.</h2>
 </div>
- -->
 
 <div class="score-holder">
 	<div class="scoring">
@@ -95,15 +88,15 @@ javascript: 'poker.js'
 	<div class="tab tab-scoring">Scoring</div>
 </div>
 
+
 <div class="credits message" data-bind="text: credits_message"></div>
 
 <div class="message" data-bind="text: message"></div>
-
 <div class="cards">
 	<% for i in [1,2,3,4,5]: %>
 		<div class="card_unit">
 			<div class="container">
-				<div class="card back" data-bind="
+				<div class="card back"data-bind="
 					css: card<%=i%>_class
 				">
 					<div class="card-inner"></div>
@@ -114,9 +107,8 @@ javascript: 'poker.js'
 					click: card<%=i%>_hold_toggle
 				">
 					<div class="card-inner">
-						<div class="value top" data-bind="text: card<%=i%>_value_symbol"></div>
-						<div class="suit"></div>
-						<!-- <div class="bottom value" data-bind="text: card<%=i%>_value_symbol"></div> -->
+						<div class="value" data-bind="text: card<%=i%>_value_symbol, visible: card_front_visible"></div>
+						<div class="suit" data-bind="visible: card_front_visible"></div>
 					</div>
 				</div>
 			</div>
