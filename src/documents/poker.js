@@ -26,7 +26,7 @@ module.exports = {
 	hold_visible: ko.observable( false ),
 	draw_visible: ko.observable( false ),
 	popup_visible: ko.observable( false ),
-	show_score_popup: ko.observable( true ),
+	show_score_popup: ko.observable( false ),
 	new_game_visible: ko.observable( true ),
 	message: ko.observable( 'Welcome' ),
 	credits: ko.observable( saved_credits ),
@@ -250,7 +250,6 @@ module.exports = {
 		self.hold_visible( false );
 		self.message( 'You lose, please try again' );
 
-		console.log( self.show_score_popup() );
 		if( self.show_score_popup() ) {
 			self.popup_visible( true );
 			setTimeout( function() {
