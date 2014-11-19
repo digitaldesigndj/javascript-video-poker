@@ -140,3 +140,7 @@ javascript: 'poker.js'
 
 	<div class="message bottom"><span data-bind="text: max_credits_message"></span> <span class="text-right">Hands Played: <span data-bind="text: hands_played"></span></span></div>
 </div>
+
+<div class="options">
+	<label>Show Score Popup <input type="checkbox" data-bind="checked: show_score_popup"></label>
+</div>

@@ -26,6 +26,7 @@ module.exports = {
 	hold_visible: ko.observable( false ),
 	draw_visible: ko.observable( false ),
 	popup_visible: ko.observable( false ),
+	show_score_popup: ko.observable( true ),
 	new_game_visible: ko.observable( true ),
 	message: ko.observable( 'Welcome' ),
 	credits: ko.observable( saved_credits ),
@@ -216,7 +217,7 @@ module.exports = {
 			}, 2 * delay );
 
 			self.new_game_visible( false );
-			self.card_front_visible( true );
+			// self.card_front_visible( true );
 			self.hold_visible( true );
 			self.message( 'Good Luck' );
 
@@ -249,11 +250,13 @@ module.exports = {
 		self.hold_visible( false );
 		self.message( 'You lose, please try again' );
 
-		self.popup_visible( true );
-
-		setTimeout( function() {
-			self.popup_visible( false );
-		}, 1000)
+		console.log( self.show_score_popup() );
+		if( self.show_score_popup() ) {
+			self.popup_visible( true );
+			setTimeout( function() {
+				self.popup_visible( false );
+			}, 1000)
+		} 
 
 		// 2 Pair, 3 of a Kind, 4 of Kind, Full House
 		$.each( [2,3,4,5,6,7,8,9,10,11,12,13,14], function( i, v ){
