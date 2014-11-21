@@ -87,6 +87,7 @@ module.exports = {
 		// Held All 
 		if( self.card1_hold() && self.card2_hold() && self.card3_hold() && self.card4_hold() && self.card5_hold() ) {
 			self.scoring();
+			self.new_game_visible( true );
 		} else {
 
 			if( !self.card1_hold() ){
