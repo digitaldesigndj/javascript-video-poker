@@ -10,7 +10,7 @@ body
 	color: yellow
 	text-transform: uppercase
 	text-shadow: 2px 2px 0 black
-	font-size: 22px
+	// font-size: 22px
 
 .score-popup
 	position: absolute
@@ -113,6 +113,39 @@ body
 		background: darken( yellow, 5 )
 		border-color: red
 
+
+.option-container 
+	position: relative
+
+.checkbox
+	display: inline-block
+	border-radius: 5px
+	box-shadow: inset 0px 0px 4px #999
+	width: 20px
+	height: 20px
+	background: white
+	border: 1px solid yellow
+	line-height: 1.4
+
+.checkbox.checked 
+	background: #333
+	box-shadow: inset 0px 0px 4px #fff
+
+.checkmark
+	display: none
+	text-align: center
+	width: 20px
+	position: absolute
+
+.checkbox.checked .checkmark
+	display: block
+
+.checkbox input
+	display: none
+
+.checkbox input:checked
+	background: #333
+
 .card
 	width: 98%
 	background-color: white
@@ -212,22 +245,22 @@ button:hover
 .clubs .value, .spades .value
 	color: black
 
-@media (min-width: 568px)
+@media ( min-width: 568px )
 	.cards
 		margin-bottom: 0
 	button
 		padding: 12px
 
-@media (min-width: 480px)
+@media ( min-width: 480px )
 	.card .value
 		font-size: 35px
-	button, .message, .tab, .scoring, .score-popup
+	button, .message, .tab, .scoring, .score-popup, .options
 		font-size: 16px
 
-@media (min-width: 760px)
+@media ( min-width: 760px )
 	.card .value
 		font-size: 50px
-	button, .message, .tab, .scoring, .score-popup
+	button, .message, .tab, .scoring, .score-popup, .options
 		font-size: 22px
 	.tab-scoring
 		padding: 4px 12px
@@ -237,22 +270,22 @@ button:hover
 		.card-inner
 			border-radius: 15px
 
-@media (min-width: 980px)
+@media ( min-width: 980px )
 	.card .value
 		font-size: 70px
-	button, .message, .tab, .scoring, .score-popup
+	button, .message, .tab, .scoring, .score-popup, .options
 		font-size: 32px
 	.tab-scoring
 		bottom: -50px
 
-@media (min-width: 1200px)
+@media ( min-width: 1200px )
 	.card .value
 		font-size: 80px
-	button, .message, .tab, .scoring, .score-popup
+	button, .message, .tab, .scoring, .score-popup, .options
 		font-size: 40px
 	.tab-scoring
 		bottom: -60px
 
-@media (min-width: 1400px)
+@media ( min-width: 1400px )
 	.card .value
 		font-size: 90px

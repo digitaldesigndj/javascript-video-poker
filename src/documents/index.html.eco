@@ -142,5 +142,7 @@ javascript: 'poker.js'
 </div>
 
 <div class="options">
-	<label>Show Score Popup <input type="checkbox" data-bind="checked: show_score_popup"></label>
+	<div class="option-container">
+		<label>Show Score Popup <div class="checkbox" data-bind="css: { checked: show_score_popup() === true }"><input type="checkbox" data-bind="checked: show_score_popup"><div class="checkmark">&#10003;</div></div></label>
+	</div>
 </div>
