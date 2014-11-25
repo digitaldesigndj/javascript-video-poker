@@ -10,7 +10,11 @@ $('.tab-scoring').on('click', function(){
 
 $('.scoring').hide();
 
+$('.tab-options').on('click', function(){
+	$('.options').slideToggle(400);
+});
 
+$('.options').hide();
 
 poker.max_credits_message = ko.dependentObservable( function(){
 	var message = "Max Credits Obtained: ";

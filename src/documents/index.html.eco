@@ -141,8 +141,13 @@ javascript: 'poker.js'
 	<div class="message bottom"><span data-bind="text: max_credits_message"></span> <span class="text-right">Hands Played: <span data-bind="text: hands_played"></span></span></div>
 </div>
 
-<div class="options">
-	<div class="option-container">
-		<label>Show Score Popup <div class="checkbox" data-bind="css: { checked: show_score_popup() === true }"><input type="checkbox" data-bind="checked: show_score_popup"><div class="checkmark">&#10003;</div></div></label>
+<div class="options-holder">
+	<div class="tab tab-options">Options</div>
+	<div class="options">
+		<div class="option-container">
+			<label>Show Score Popup <div class="checkbox" data-bind="css: { checked: show_score_popup() === true }"><input type="checkbox" data-bind="checked: show_score_popup"><div class="checkmark">&#10003;</div></div></label>
+		</div>
+		<div class="clearfix"></div>
 	</div>
+	<div class="clearfix"></div>
 </div>
