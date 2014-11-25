@@ -225,7 +225,7 @@ module.exports = {
 
 		}else{
 			alert( 'You went broke! But this is no casino, have a 100 credits on the house' );
-			self.credits( 100 );
+			self.credits( self.credits() + 100 );
 		}
 	},
 	// The following are functions only... not to be used in a KO binding
