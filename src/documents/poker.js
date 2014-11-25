@@ -25,6 +25,7 @@ hands_played = Storage.getLocalStorageValue('hands_played', 0);
 module.exports = {
 	hold_visible: ko.observable( false ),
 	draw_visible: ko.observable( false ),
+	bet_increment_visible: ko.observable( true ),
 	popup_visible: ko.observable( false ),
 	show_score_popup: ko.observable( false ),
 	new_game_visible: ko.observable( true ),
@@ -78,6 +79,7 @@ module.exports = {
 			this.card5_hold( !this.card5_hold() );
 		}
 	},
+
 	draw: function(){
 		self = this;
 		if( !self.draw_visible() ){
@@ -86,8 +88,7 @@ module.exports = {
 
 		// Held All 
 		if( self.card1_hold() && self.card2_hold() && self.card3_hold() && self.card4_hold() && self.card5_hold() ) {
-			self.scoring();
-			self.new_game_visible( true );
+			self.score_and_reset_game();
 		} else {
 
 			if( !self.card1_hold() ){
@@ -137,8 +138,7 @@ module.exports = {
 			}
 
 			setTimeout( function() {
-				self.scoring();
-				self.new_game_visible( true );
+				self.score_and_reset_game();
 			}, 1000 );
 		}
 
@@ -163,6 +163,7 @@ module.exports = {
 			five_new_cards = []
 			delay = 100;
 		if( self.credits() >= self.bet() ){
+			self.bet_increment_visible( false );
 			self.hands_played( self.hands_played() + 1 );
 			self.credits( self.credits() - self.bet() );
 			Deck.init();
@@ -322,6 +323,12 @@ module.exports = {
 		// console.log( pair_count );
 		// console.log( triple_count );
 		// console.log( straight );
+	},
+	score_and_reset_game: function(){
+		self = this;
+		self.scoring();
+		self.new_game_visible( true );
+		self.bet_increment_visible( true );
 	},
 	countInArray: function( array, what ){
 		var count = 0;
