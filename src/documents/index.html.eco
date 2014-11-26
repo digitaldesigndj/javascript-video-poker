@@ -138,8 +138,10 @@ javascript: 'poker.js'
 		<button data-bind="click: incrementBet, event: { touchend: incrementBet }, visible: bet_increment_visible">Bet <span data-bind="text: bet">1</span></button>
 	</div>
 
-	<div class="message bottom"><span data-bind="text: max_credits_message"></span> <span class="text-right">Hands Played: <span data-bind="text: hands_played"></span></span></div>
+
 </div>
+
+<div class="message bottom"><span data-bind="text: max_credits_message"></span> <span class="text-right">Hands Played: <span data-bind="text: hands_played"></span></span></div>
 
 <div class="options-holder">
 	<div class="tab tab-options">Options</div>
