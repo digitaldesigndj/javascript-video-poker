@@ -80,6 +80,21 @@ module.exports = {
 		}
 	},
 
+	holdAll: function(){
+		self = this;
+
+		self.hold_visible( false );
+		self.draw_visible( false );
+
+		self.card1_hold( false );
+		self.card2_hold( false );
+		self.card3_hold( false );
+		self.card4_hold( false );
+		self.card5_hold( false );
+
+		self.score_and_reset_game();
+	},
+
 	draw: function(){
 		self = this;
 		if( !self.draw_visible() ){
@@ -152,6 +167,7 @@ module.exports = {
 		self.card5_hold( false );
 
 	},
+
 	incrementBet: function(){
 		self = this;
 		if( self.bet() === 5 ){
@@ -159,6 +175,7 @@ module.exports = {
 		}
 		self.bet( self.bet() + 1 );
 	},
+
 	newGame: function(){
 		var self = this,
 			five_new_cards = []
@@ -220,8 +237,7 @@ module.exports = {
 			}, 2 * delay );
 
 			self.new_game_visible( false );
-			// self.card_front_visible( true );
-			self.hold_visible( true );
+
 			self.message( 'Good Luck' );
 
 		}else{
