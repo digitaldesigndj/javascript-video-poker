@@ -11,6 +11,7 @@ var isTouchDevice = 'ontouchstart' in document.documentElement;
 saved_credits = Storage.getLocalStorageValue('credits', 100);
 max_credits = Storage.getLocalStorageValue('max_credits', 100);
 hands_played = Storage.getLocalStorageValue('hands_played', 0);
+free_credits_obtained = Storage.getLocalStorageValue('free_credits_obtained', 100);
 // Load existing value if set
 // var key = 'credits';
 
@@ -35,6 +36,7 @@ module.exports = {
 	max_credits: ko.observable( max_credits ),
 	bet: ko.observable(5),
 	hands_played: ko.observable( hands_played ),
+	free_credits_obtained: ko.observable( free_credits_obtained ),
 
 	card1_suit:  ko.observable(),
 	card1_value: ko.observable(),
@@ -243,6 +245,7 @@ module.exports = {
 
 		}else{
 			alert( 'You went broke! But this is no casino, have a 100 credits on the house' );
+			self.free_credits_obtained( self.free_credits_obtained() + 100 );
 			self.credits( self.credits() + 100 );
 		}
 	},

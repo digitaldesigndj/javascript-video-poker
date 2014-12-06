@@ -14,6 +14,13 @@
 				.checkbox(data-bind='css: { checked: show_score_popup() === true }')
 					input(type='checkbox', data-bind='checked: show_score_popup')
 					.checkmark &check;
+		.stats
+			p
+				span(data-bind='text: max_credits_message')
+			p Hands Played: 
+				span(data-bind='text: hands_played')
+			p Free Credits Taken:
+				span(data-bind='text: free_credits_obtained')
 		.clearfix
 	.clearfix
 .footer

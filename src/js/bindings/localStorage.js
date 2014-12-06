@@ -13,3 +13,7 @@ poker.max_credits.subscribe(function(newValue) {
 poker.hands_played.subscribe(function(newValue) {
 	localStorage.setItem('hands_played', newValue );
 });
+
+poker.free_credits_obtained.subscribe(function(newValue) {
+	localStorage.setItem('free_credits_obtained', newValue );
+});
