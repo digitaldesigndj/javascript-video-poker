@@ -2,10 +2,29 @@
 head
 	title=title
 
-	meta(name='viewport', content='width=device-width, initial-scale=1')
-	meta(name='description', content=description)
 	meta(charset='utf-8')
+	meta(name='description', content=description)
+	meta(name='keywords' content=keywords)
+	meta(name='viewport' content=viewport)
+	meta(name='apple-mobile-web-app-capable', content='yes')
+	meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+
+	//- Favicon
+	link(rel='shortcut icon', href='ico/favicon.png')
+	//- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices:
+	link(rel='apple-touch-icon-precomposed', href='ico/poker57.png')
+	//- For first- and second-generation iPad:
+	link(rel='apple-touch-icon-precomposed', sizes='72x72', href='ico/poker72.png')
+	//- For iPhone with high-resolution Retina display:
+	link(rel='apple-touch-icon-precomposed', sizes='114x114', href='ico/poker114.png')
+	//- For third-generation iPad with high-resolution Retina display:
+	link(rel='apple-touch-icon-precomposed', sizes='144x144', href='ico/poker144.png')
+
+	//- Startup Screens
+	//- iPad Landscape
+	link(href='ico/ipad-horizontal.png', media='(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)', rel='apple-touch-startup-image')
+	//- iPad Landscape (Retina)
+	link(href='ico/ipad-retina-horizontal.png', media='(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)', rel='apple-touch-startup-image')
 
 	link(rel='stylesheet', href='css/bundle.css')
-
 	link(rel='canonical' href=canonical)

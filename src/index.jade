@@ -12,21 +12,12 @@ html
 					.container
 						.card.back(data-bind='css: card#{i}_class')
 							.card-inner
-						.card(data-bind='\
-							css: card#{i}_class,\
-							event: { touchstart: card#{i}_hold_toggle },\
-							click: card#{i}_hold_toggle\
-							')
+						.card(data-bind='css: card#{i}_class, event: { touchstart: card#{i}_hold_toggle }, click: card#{i}_hold_toggle')
 							.card-inner
 								.value.top(data-bind='text: card#{i}_value_symbol')
 								.suit
 								// <div class="bottom value" data-bind="text: card#{i}_value_symbol"></div>
-						button(data-bind='\
-							css: card#{i}_class,\
-							click: card#{i}_hold_toggle,\
-							event: { touchstart: card#{i}_hold_toggle },\
-							visible: hold_visible\
-							') HOLD
+						button(data-bind='css: card#{i}_class, click: card#{i}_hold_toggle, event: { touchstart: card#{i}_hold_toggle }, visible: hold_visible') HOLD
 
 		.control-panel
 			.buttons

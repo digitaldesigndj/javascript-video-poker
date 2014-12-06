@@ -11,34 +11,37 @@ module.exports = ( grunt ) ->
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json')
 
+## Minification
+
 		uglify:
 			production:
 				files:
-					'dest/js/bundle.js': ['out/js/bundle.js']
+					'prod/js/bundle.js': ['out/js/bundle.js']
 
 		cssmin:
 			production:
 				files:
-					'dest/css/bundle.css': ['out/css/bundle.css']
+					'prod/css/bundle.css': ['out/css/bundle.css']
+
+## Build Tasks
 
 		copy:
 			files:
 				expand: true
-				# flatten: true
 				cwd: 'src/files/'
 				src: '**'
 				dest: 'out/'
-			# html:
-			# 	expand: true
-			# 	flatten: true
-			# 	src: 'src/*.html'
-			# 	dest: 'out/'
 			production:
 				expand: true
-				flatten: true
-				src: ['out/**', '!out/js/**', '!out/css/**']
-				dest: 'dest/'
+				cwd: 'out/'
+				src: ['**', '!*.html', '!js/**', '!css/**']
+				dest: 'prod/'
 
+		clean: 
+			out: ['out']
+			production: ['prod']
+
+## Compile Tasks
 
 		stylus:
 			options:
@@ -67,16 +70,18 @@ module.exports = ( grunt ) ->
 						jade_data
 					pretty: false
 				files:
-					'out/index.html': ['src/*.jade']
+					'prod/index.html': ['src/*.jade']
 
 		browserify:
 			compile:
 				src: 'src/js/app.js'
 				dest: 'out/js/bundle.js'
 
+## Developer Tasks
+
 		watch:
 			styl:
-				files: ['src/css/*.styl']
+				files: ['src/css/**']
 				tasks: ['stylus:compile']
 				options:
 					livereload: true
@@ -90,9 +95,7 @@ module.exports = ( grunt ) ->
 				tasks: ['browserify:compile']
 				options:
 					livereload: true
-		clean: 
-			out: ['out']
-			dest: ['dest']
+
 	})
 
 	grunt.loadNpmTasks('grunt-contrib-stylus')
@@ -123,10 +126,10 @@ module.exports = ( grunt ) ->
 	)
 	grunt.registerTask('export',
 		[
-			'clean:dest'
+			'clean:production'
 			'build'
-			'jade:production'
 			'copy:production'
+			'jade:production'
 			'cssmin:production'
 			'uglify:production'
 			'build'

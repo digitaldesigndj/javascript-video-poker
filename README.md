@@ -4,58 +4,28 @@ A Simple poker game
 
 ## Developers
 
-Get started locally (with *nix npm and git)
+I have replace the old DocPad requirement of the project with Grunt. Check out the [Gruntfile](Gruntfile.coffee) for the latest details. 
 
-```bash
-git clone https://github.com/digitaldesigndj/javascript-video-poker poker
-cd poker
-npm install
-docpad run
-```
+	grunt watch
 
-Then visit [http://localhost:9887](http://localhost:9887)
+Use this task to start up the devlopment environment. Files from `src/` are compiled and output to the `out/` directory. I always use a web server for devlopment, but it's not a strict requirement.
 
-**set the environment variable `PORT` to use a custom one**
+	grunt export
+
+This task will output an optimized final version of the application to the `prod/` directory. The livereload include is automatically stripped from the production version of the application.
+
 
 ## Keyboard Controls
 
 `Enter` to deal/start game, `1-5` to hold.
 
-## Remove Payout Table
+## Options
 
-**hidden features**
-
-Use the score tab to hide and show the payout table. You have to refresh the app to get it back. HTML5 LocalStorage means you will not lose your stats, they are stored in the browser. They don't sync yet.
-
-## ToDo
-
-* Hold All Button
-
-
-### Tracking
-
-* Track Gone Brokes
-* Reset Hands Played After Broke?
-* Track Max Hands Played
-
-
-#### Further in the future
-
-* Docker Container
-* Database for Stat Tracking
-* Social Login (Google, FB)
-* Editable/Selectable Payout Tables
-
-
-## Disclaimer
-
-Use this code freely, you can even close the source for your own use if you want to. Contributing back would be nice. I'm not a lawyer and I think MIT means: "Don't sue me bro". I'm not in this game for lawsuits, you don't even need to credit me. It's just code! [PLUR](http://en.wikipedia.org/wiki/PLUR).
+There's a panel at the bottom of the inteface you can open. You can activate a score popup feature with this panel.
 
 ## License
 
-More Freedom than the MIT License (MIT)
-
-&copy; 2013 Taylor Young
+&copy; 2013-2014 Taylor Young
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -72,4 +42,4 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+THE SOFTWARE. [PLUR](http://en.wikipedia.org/wiki/PLUR).
