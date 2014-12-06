@@ -1,6 +1,4 @@
-var $     = require( 'jquery-browserify' ),
-	ko    = require( 'knockout' ),
-	poker = require( '../poker.js' );
+var poker = require( '../poker.js' );
 
 // Bindings used for localStorage
 

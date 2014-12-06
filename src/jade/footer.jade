@@ -1,0 +1,24 @@
+//- footer.jade
+.message.bottom
+	span(data-bind='text: max_credits_message')
+	|  
+	span.text-right
+		| Hands Played: 
+		span(data-bind='text: hands_played')
+.options-holder
+	.tab.tab-options Options
+	.options
+		.option-container
+			label
+				| Show Score Popup 
+				.checkbox(data-bind='css: { checked: show_score_popup() === true }')
+					input(type='checkbox', data-bind='checked: show_score_popup')
+					.checkmark &check;
+		.clearfix
+	.clearfix
+.footer
+	p.footer-info Site last modified: 
+		span=timestamp
+if env === 'dev'
+	script(src='//localhost:35729/livereload.js')
+script(src='js/bundle.js')

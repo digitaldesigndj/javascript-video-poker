@@ -1,5 +1,4 @@
-var $     = require( 'jquery-browserify' ),
-	ko    = require( 'knockout' ),
+var $     = require( '../../../bower_components/jquery/dist/jquery' ),
 	poker = require( '../poker.js' );
 
 $(window).on( 'keypress', function(e){

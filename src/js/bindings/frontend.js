@@ -1,5 +1,5 @@
-var $     = require( 'jquery-browserify' ),
-	ko    = require( 'knockout' ),
+var $     = require( '../../../bower_components/jquery/dist/jquery' )
+	ko    = require( '../../../bower_components/knockout/dist/knockout' ),
 	poker = require( '../poker.js' );
 
 // Frontend display bindings

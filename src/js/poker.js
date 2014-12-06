@@ -1,12 +1,13 @@
-var $       = require('jquery-browserify'),
-	ko      = require('knockout'),
-	Deck   = require('./deck.js');
+var $       = require('../../bower_components/jquery/dist/jquery'),
+	ko      = require('../../bower_components/knockout/dist/knockout'),
+	Deck    = require('./deck.js'),
 	Storage = require('./localStorageValue.js');
 
 Deck.init();
 
 var five_cards = Deck.cards.splice(0, 5);
 var saved_credits = 0;
+var isTouchDevice = 'ontouchstart' in document.documentElement;
 saved_credits = Storage.getLocalStorageValue('credits', 100);
 max_credits = Storage.getLocalStorageValue('max_credits', 100);
 hands_played = Storage.getLocalStorageValue('hands_played', 0);

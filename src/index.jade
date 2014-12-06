@@ -1,0 +1,39 @@
+//- index.jade
+doctype html
+html
+	include ./jade/head.jade
+	body
+		include ./jade/scoring.jade
+		.credits.message(data-bind='text: credits_message')
+		.message(data-bind='text: message')
+		.cards
+			- for i in [1,2,3,4,5]
+				.card_unit
+					.container
+						.card.back(data-bind='css: card#{i}_class')
+							.card-inner
+						.card(data-bind='\
+							css: card#{i}_class,\
+							event: { touchstart: card#{i}_hold_toggle },\
+							click: card#{i}_hold_toggle\
+							')
+							.card-inner
+								.value.top(data-bind='text: card#{i}_value_symbol')
+								.suit
+								// <div class="bottom value" data-bind="text: card#{i}_value_symbol"></div>
+						button(data-bind='\
+							css: card#{i}_class,\
+							click: card#{i}_hold_toggle,\
+							event: { touchstart: card#{i}_hold_toggle },\
+							visible: hold_visible\
+							') HOLD
+
+		.control-panel
+			.buttons
+				button(data-bind='click: draw, event: { touchend: draw }, visible: draw_visible') DRAW
+				button(data-bind='click: holdAll, event: { touchend: holdAll }, visible: hold_visible') HOLD ALL
+				button(data-bind='click: newGame, event: { touchend: newGame }, visible: new_game_visible') DEAL
+				button(data-bind='click: incrementBet, event: { touchend: incrementBet }, visible: bet_increment_visible')
+					| Bet 
+					span(data-bind='text: bet') 1
+		include ./jade/footer.jade
