@@ -2,6 +2,16 @@
 
 A Simple poker game
 
+## Requirements
+
+To build the project, you'll need NodeJS, NPM, Grunt and Bower.
+
+To download the dependencies.
+
+```
+npm install; bower install
+```
+
 ## Developers
 
 I have replace the old DocPad requirement of the project with Grunt. Check out the [Gruntfile](Gruntfile.coffee) for the latest details. 
