@@ -26,7 +26,7 @@ steps:
     image: alpine
     volumes:
       - name: nginx
-        path: /nginx
+        path: /drone/src/nginx
     commands:
       - ls
       - ls -la
@@ -35,7 +35,7 @@ steps:
     image: alpine
     volumes:
       - name: nginx
-        path: /nginx
+        path: /drone/src/nginx
     commands:
       - ls
       - ls -la
