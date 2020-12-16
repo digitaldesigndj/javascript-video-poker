@@ -27,13 +27,17 @@ steps:
     volumes:
       - name: nginx
     commands:
-      - cp -r public nginx/stage
+      - cp -r out nginx/stage
   - name: deploy
     image: alpine
     volumes:
       - name: nginx
+        path: /nginx
     commands:
-      - rm -r nginx/public; mv nginx/stage nginx/public
+      - ls
+      # - rm -r nginx/previous
+      # - mv nginx/public nginx/previous
+      # - mv nginx/stage nginx/public
     when:
       branch:
         - main
