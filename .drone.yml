@@ -26,6 +26,7 @@ steps:
     image: alpine
     volumes:
       - name: nginx
+        path: /nginx
     commands:
       - cp -r out nginx/stage
   - name: deploy
