@@ -1,0 +1,59 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: restore-cache
+    image: drillster/drone-volume-cache
+    volumes:
+      - name: cache
+    settings:
+      restore: true
+      mount:
+        - ./node_modules
+        - ./bower_components
+  - name: build
+    image: node
+    volumes:
+      - name: cache
+      - name: nginx
+    commands:
+      - yarn
+      - yarn clean
+      - yarn build
+    environment:
+      GATSBY_APP_BACKEND_URL:
+        from_secret: GATSBY_APP_BACKEND_URL
+      GATSBY_EXPERIMENTAL_ROUTING_APIS:
+        from_secret: GATSBY_EXPERIMENTAL_ROUTING_APIS
+  - name: stage
+    image: alpine
+    volumes:
+      - name: nginx
+    commands:
+      - cp -r public nginx/stage
+  - name: deploy
+    image: alpine
+    volumes:
+      - name: nginx
+    commands:
+      - rm -r nginx/public; mv nginx/stage nginx/public
+    when:
+      branch:
+        - main
+  - name: rebuild-cache
+    image: drillster/drone-volume-cache
+    volumes:
+      - name: cache
+    settings:
+      rebuild: true
+      mount:
+        - ./node_modules
+        - ./bower_components
+
+volumes:
+  - name: cache
+    host:
+      path: /tmp/cache:/knockout.videopoker.academy
+  - name: nginx
+    host:
+      path: /var/www/knockout.videopoker.academy
