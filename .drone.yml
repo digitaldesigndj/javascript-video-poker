@@ -5,7 +5,7 @@ steps:
   - name: restore-cache
     image: drillster/drone-volume-cache
     volumes:
-      - /tmp/cache:/cache
+      - name: cache
     settings:
       restore: true
       mount:
@@ -13,8 +13,6 @@ steps:
         - ./bower_components
   - name: build
     image: node
-    volumes:
-      - /tmp/cache:/cache
     commands:
       - yarn
       - yarn build
@@ -41,7 +39,7 @@ steps:
   - name: rebuild-cache
     image: drillster/drone-volume-cache
     volumes:
-      - /tmp/cache:/cache
+      - name: cache
     settings:
       rebuild: true
       mount:
@@ -49,6 +47,9 @@ steps:
         - ./bower_components
 
 volumes:
+  - name: cache
+    host:
+      path: /tmp/cache/knockout.videopoker.academy
   - name: nginx
     host:
       path: /var/www/knockout.videopoker.academy
