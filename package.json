@@ -1,7 +1,7 @@
 {
-  "name": "GruntTest",
-  "version": "0.0.0",
-  "description": "Trying out grunt",
+  "name": "JavaScriptVideoPoker",
+  "version": "0.1.0",
+  "description": "A card game, jacks or better video poker",
   "main": "src/js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
