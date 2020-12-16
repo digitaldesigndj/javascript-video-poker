@@ -14,16 +14,15 @@ npm install; bower install
 
 ## Developers
 
-I have replace the old DocPad requirement of the project with Grunt. Check out the [Gruntfile](Gruntfile.coffee) for the latest details. 
+I have replace the old DocPad requirement of the project with Grunt. Check out the [Gruntfile](Gruntfile.coffee) for the latest details.
 
-	grunt watch
+    grunt watch
 
 Use this task to start up the devlopment environment. Files from `src/` are compiled and output to the `out/` directory. I always use a web server for devlopment, but it's not a strict requirement.
 
-	grunt export
+    grunt export
 
 This task will output an optimized final version of the application to the `prod/` directory. The livereload include is automatically stripped from the production version of the application.
-
 
 ## Keyboard Controls
 
