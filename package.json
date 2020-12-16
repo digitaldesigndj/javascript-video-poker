@@ -1,5 +1,5 @@
 {
-  "name": "JavaScriptVideoPoker",
+  "name": "javascript-video-poker",
   "version": "0.1.0",
   "description": "A card game, jacks or better video poker",
   "main": "src/js/app.js",
