@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "bower install",
-    "build": "grunt export"
+    "build": "grunt export",
+    "deploy": "rsync -r out/* ec:/var/www/knockout.videopoker.academy"
   },
   "author": "",
   "license": "MIT",
@@ -24,6 +25,7 @@
     "grunt-contrib-watch": "^1.1.0"
   },
   "dependencies": {
+    "coffeescript": "^2.5.1",
     "marked": "^0.7.0"
   }
 }
