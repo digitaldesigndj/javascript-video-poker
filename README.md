@@ -9,7 +9,7 @@ To build the project, you'll need NodeJS, NPM, Grunt and Bower.
 To download the dependencies.
 
 ```
-npm install; bower install
+yarn
 ```
 
 ## Developers
