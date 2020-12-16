@@ -15,7 +15,6 @@ steps:
     image: node
     volumes:
       - /tmp/cache:/cache
-      - name: nginx
     commands:
       - yarn
       - yarn build
