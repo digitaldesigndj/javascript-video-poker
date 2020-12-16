@@ -2,9 +2,11 @@
 
 A Simple poker game
 
+[![Build Status](https://drone.eightfold.cloud/api/badges/digitaldesigndj/javascript-video-poker/status.svg)](https://drone.eightfold.cloud/digitaldesigndj/javascript-video-poker)
+
 ## Requirements
 
-To build the project, you'll need NodeJS, NPM, Grunt and Bower.
+To build the project, you'll need NodeJS, Yarn, Grunt, CoffeeScript and Bower.
 
 To download the dependencies.
 
