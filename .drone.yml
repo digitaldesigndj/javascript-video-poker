@@ -15,7 +15,6 @@ steps:
   - name: build
     image: node
     commands:
-      - ls
       - yarn
       - yarn build
     environment:
@@ -29,20 +28,16 @@ steps:
       - name: nginx
         path: /drone/src/nginx
     commands:
-      - ls
-      - ls -la
-      # - cp -r out nginx/stage
+      - cp -r out nginx/stage
   - name: deploy
     image: alpine
     volumes:
       - name: nginx
         path: /drone/src/nginx
     commands:
-      - ls
-      - ls -la
-      # - rm -r nginx/previous
-      # - mv nginx/public nginx/previous
-      # - mv nginx/stage nginx/public
+      - rm -r nginx/previous
+      - mv nginx/public nginx/previous
+      - mv nginx/stage nginx/public
     when:
       branch:
         - main
