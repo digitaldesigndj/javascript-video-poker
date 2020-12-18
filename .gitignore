@@ -2,3 +2,5 @@ out
 prod
 node_modules
 bower_components
+/.fab
+/fab.zip
