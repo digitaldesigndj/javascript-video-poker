@@ -15,6 +15,18 @@ yarn install
 
 Tested with Node v19.6.0
 
+## Build the game
+
+once you have the dependencies installed
+
+```
+npm run build
+```
+
+then you can find the optimized game in `./prod`
+
+or check this repo out: https://github.com/hyprtxt/videopoker.deno.dev
+
 ## Developers
 
 I have replace the old DocPad requirement of the project with Grunt. Check out the [Gruntfile](Gruntfile.coffee) for the latest details.
