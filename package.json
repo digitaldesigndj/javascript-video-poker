@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "bower install --allow-root",
     "build": "grunt export",
-    "deploy": "rsync -r out/* ec:/var/www/knockout.videopoker.academy"
   },
   "author": "",
   "license": "MIT",
