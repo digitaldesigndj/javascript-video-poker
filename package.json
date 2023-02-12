@@ -26,6 +26,6 @@
   },
   "dependencies": {
     "coffeescript": "^2.5.1",
-    "marked": "^0.7.0"
+    "marked": "^4.0.10"
   }
 }
