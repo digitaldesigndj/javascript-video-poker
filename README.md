@@ -21,7 +21,7 @@ I have replace the old DocPad requirement of the project with Grunt. Check out t
 
     grunt watch
 
-Use this task to start up the devlopment environment. Files from `src/` are compiled and output to the `out/` directory. Bring you own web server.
+Use this task to start up the devlopment environment. Files from `src/` are compiled and output to the `out/` directory. Bring your own web server.
 
     grunt export
 
