@@ -1,15 +1,15 @@
 {
   "name": "javascript-video-poker",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A card game, jacks or better video poker",
   "main": "src/js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "bower install --allow-root",
-    "build": "grunt export",
-    "deploy": "rsync -r out/* ec:/var/www/knockout.videopoker.academy"
+    "prereqs": "npm i -g yarn grunt",
+    "install": "yarn install",
+    "build": "grunt export"
   },
-  "author": "",
+  "author": "Taylor Young <tdy721@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.8.8",
