@@ -4,13 +4,16 @@ A Simple poker game
 
 ## Requirements
 
-To build the project, you'll need NodeJS, NPM, Grunt and Bower.
+To build the project, you'll need NodeJS, NPM, Yarn and Grunt.
 
 To download the dependencies.
 
 ```
-yarn
+npm i -g yarn grunt
+yarn install
 ```
+
+Tested with Node v19.6.0
 
 ## Developers
 
@@ -18,7 +21,7 @@ I have replace the old DocPad requirement of the project with Grunt. Check out t
 
     grunt watch
 
-Use this task to start up the devlopment environment. Files from `src/` are compiled and output to the `out/` directory. I always use a web server for devlopment, but it's not a strict requirement.
+Use this task to start up the devlopment environment. Files from `src/` are compiled and output to the `out/` directory. Bring you own web server.
 
     grunt export
 
@@ -34,7 +37,7 @@ There's a panel at the bottom of the inteface you can open. You can activate a s
 
 ## License
 
-&copy; 2013-2014 Taylor Young
+&copy; 2013-2023 Taylor Young
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
